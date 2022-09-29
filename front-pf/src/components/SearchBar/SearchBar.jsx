@@ -18,7 +18,7 @@ export default function SearchBar() {
 
 
   return (
-    <div className='flex w-72 h-14 justify-center align-center m-28'>
+    <div className='flex w-72 h-14 justify-center align-center mt-12 mb-40'>
         <form className='flex w-full h-14' onSubmit={(e) => handlerSearch(e)}>
             <input 
              className='w-full rounded-l-sm text-lg p-2' 
