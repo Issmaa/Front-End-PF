@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import {Link} from "react-router-dom";
 import style from './NavBar.module.css';
 // import SideBar from './SideBar';
@@ -20,28 +19,11 @@ export default function NavBar() {
         <Link to='/' className="no-underline">
         <li className='mx-4 text-zinc-100 hover:text-blue-300 transition ease-in duration-200 text-xl font-semibold'>Home</li>
         </Link>
-        {/* <Link to={'#'}>
-        <li className='mx-3.5 text-gray-600 hover:text-sky-700 transition ease-in duration-200 cursor-pointer text-xl'>Destinations</li>
-        </Link>
-        <Link to={'#'}>
-        <li className='mx-3.5 text-gray-600 hover:text-sky-700 transition ease-in duration-200 cursor-pointer text-xl'><a href='#'>Packages</a></li>
-        </Link>
-        <Link to={'#'}>
-        <li className='mx-3.5 text-gray-600 hover:text-sky-700 transition ease-in duration-200 cursor-pointer text-xl'><a href='#'>Help</a></li>
-        </Link> */}
         <Link to={'#'} className="no-underline ">
         <li className='mx-3.5 text-zinc-100 hover:text-blue-300 transition ease-in duration-200 cursor-pointer text-xl font-semibold'>About Us</li>
-        </Link>
-
-        <div className="my-4 mx-3">
-          <button className="mx-2 text-gray-600 hover:text-sky-700 text-lg p-1">
-            Login
-          </button>
-          <button className="mx-2 text-zinc-100 bg-blue-600 w-20 h-12 rounded-lg hover:bg-zinc-100 hover:text-blue-600 transition ease-in duration-200 text-lg p-1">
-            Sign up
-          </button>
-        </div>
-      </nav>
+        </Link> 
+      </ul>
+      </div>
     <div className='my-3.5 mx-2.5'>
     <Link to="/login">
       <button className='mx-2 text-zinc-100 hover:text-blue-300 text-xl p-1 font-semibold'>Login</button>
