@@ -1,0 +1,1 @@
+export const GET_ALL_PACKS = "GET_ALL_PACKS"

@@ -25,14 +25,6 @@ export default function Login() {
                 <div className={s.inputField}>
                   <input type={passEye} placeholder="Password" required />
                   <i class="uil uil-lock"></i>
-                  <i
-                    class={
-                      passEye === "password"
-                        ? "uil uil-eye-slash showHidePw"
-                        : "uil uil-eye showHidePw"
-                    }
-                    onClick={toggleEye}
-                  ></i>
                 </div>
                 <div className={s.checkboxText}>
                   <div className={s.checkboxContent}>

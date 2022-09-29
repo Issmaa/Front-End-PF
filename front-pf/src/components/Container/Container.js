@@ -15,9 +15,9 @@ export default function Container() {
             <h2 className="text-zinc-100 text-xl"> No pienses más! tomate esas vacaciones</h2>
         </div>
         <CardContainer />
-        <div className={s.btnAndComment}>
+        <div className={s.btn}>
           <Link to="/cards/create">
-            <button>Create Card</button>
+            <button>See All Destinations</button>
           </Link>
         </div>
       </div>

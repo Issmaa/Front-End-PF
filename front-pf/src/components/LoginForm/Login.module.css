@@ -2,8 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 100vh;
   width: 100vw;
+  background-image: url("../../../public/images/bgLoginAndRegister.jpg");
+  background-size: 100% 100%;
 }
 
 .formMainContainer {
@@ -42,7 +44,7 @@
   bottom: 0;
   height: 3px;
   width: 30px;
-  background-color: rgba(255, 25, 0, 0.75);
+  background-color: #5bc0beff;
   border-radius: 25px;
 }
 
@@ -67,7 +69,7 @@
 }
 
 .inputField input:is(:focus, :valid) {
-  border-bottom-color: rgba(255, 25, 0, 0.75);
+  border-bottom-color: #5bc0beff;
   transition: 0.3s;
 }
 
@@ -81,7 +83,7 @@
 }
 
 .inputField input:is(:focus, :valid) ~ i {
-  color: rgba(255, 25, 0, 0.75);
+  color: #5bc0beff;
   transition: 0.3s;
 }
 
@@ -102,7 +104,7 @@
 
 .checkboxContent input {
   margin: 0 6px 0px 5px;
-  accent-color: rgba(255, 25, 0, 0.75);
+  accent-color: #5bc0beff;
 }
 
 .checkboxContent input:hover {
@@ -116,7 +118,7 @@
 
 .forms a {
   text-decoration: none;
-  color: rgba(255, 25, 0, 0.75);
+  color: #5bc0beff;
 }
 
 .forms a:hover {
@@ -139,7 +141,7 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 10px;
   transition: 0.2s;
-  background-color: rgba(255, 25, 0, 0.7);
+  background-color: #5bc0beff;
   color: white;
 }
 
