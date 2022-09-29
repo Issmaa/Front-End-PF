@@ -76,7 +76,7 @@ export default function Login() {
                       autoCapitalize="off"
                       required
                     />
-                    <i class="uil uilUser"></i>
+                    <i class="uil uil-user"></i>
                   </div>
                   <div className={s.lastnameContainer}>
                     <input
@@ -86,10 +86,8 @@ export default function Login() {
                       autoCapitalize="off"
                       required
                     />
-                    <i class="uil uil-user lni"></i>
                   </div>
                 </div>
-
                 <div className={s.firstLastNameContainer}>
                   <div className={`${s.nameContainer} ${s.inputField}`}>
                     <input
@@ -102,14 +100,13 @@ export default function Login() {
                     <i class="uil uil-map "></i>
                   </div>
                   <div className={s.lastnameContainer}>
-                    <input
+                  <input
                       id="lastname"
                       type="text"
                       placeholder="Zip Code"
                       autoCapitalize="off"
                       required
                     />
-                    <i class="uil uil-home lni"></i>
                   </div>
                 </div>
 
