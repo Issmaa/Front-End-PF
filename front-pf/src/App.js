@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import CreateCard from "./pages/CreateCard";
+import CreateCard from "./pages/CreateTravel";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
