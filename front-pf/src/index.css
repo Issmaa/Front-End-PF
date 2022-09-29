@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --oxford-blue: #0b132bff;
+
+:root{
+--oxford-blue: #0b132bff;
 --space-cadet: #1c2541ff;
 --y-in-mn-blue: #3a506bff;
 --maximum-blue-green: #5bc0beff;
---turquoise-blue: #6fffe9ff; */
+--turquoise-blue: #6fffe9ff;
+}
 body {
   color: var(--oxford-blue, #0b132bff);
   margin: 0;
