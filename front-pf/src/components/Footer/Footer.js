@@ -9,7 +9,7 @@ import CaruselPropaganda from "../Propaganda/Propaganda";
 
 export default function Footer() {
   return (
-    <div className="footer-container">
+    <div className="footer-container" class="bg-1-color">
       <div className="container-izq-footer">
         <div className="container-footer-info">
           <ul className="ul-footer">

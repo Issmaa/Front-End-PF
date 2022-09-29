@@ -13,7 +13,7 @@ export default function NavBar() {
       </a>
     </div>
     <div className='mx-2'>
-      <ul className='flex flex-row my-7 mx-2'>
+      <ul className='flex flex-row my-2.5 mx-2'>
         <Link to='/' className="no-underline">
         <li className='mx-4 text-zinc-100 hover:text-4-color transition ease-in duration-200 text-xl font-semibold'>Home</li>
         </Link>
