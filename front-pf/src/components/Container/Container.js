@@ -1,6 +1,6 @@
 import React from "react";
 import CardContainer from "../CardContainer/CardContainer";
-import Comments from "../Comments/Comments";
+// import Comments from "../Comments/Comments";
 import { Link } from "react-router-dom";
 import s from "./Container.module.css";
 import SideBar from "../SideBar/SideBar";
