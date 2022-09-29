@@ -1,10 +1,10 @@
-import React from 'react'
-import NavBar from '../components/NavBar/NavBar'
+import React from "react";
+import RegisterForm from "../components/RegisterForm/RegisterForm";
 
-export default function Login() {
+export default function Register() {
   return (
     <div>
-        <NavBar />
+      <RegisterForm />
     </div>
-  )
+  );
 }

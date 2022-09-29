@@ -7,7 +7,6 @@ import CreateCard from "./pages/CreateCard"
 import Destinations from './pages/Destinations/Destinations';
 import "bootstrap/dist/css/bootstrap.min.css"
 
-
 function App() {
   return (
     <div className="App">
