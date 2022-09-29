@@ -1,5 +1,4 @@
 .container{
-    border: 2px solid black;
     margin-top: 7vh;
     display: flex;
     width: 100%;
@@ -26,7 +25,6 @@
 }
 
 .imgContainer{
-    border: 1px solid brown;
     margin-top: 10px;
     height: 10vh;
     width: 100%;

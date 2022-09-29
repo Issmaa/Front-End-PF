@@ -11,7 +11,8 @@ export default function Container() {
       <SideBar />
       <div className={s.mainContainer}>
         <div className={s.imgContainer}>
-            <p>Image</p>
+            <h2 className="text-zinc-100">Vive experiencias inolvidables.</h2>
+            <h2 className="text-zinc-100 text-xl"> No pienses más! tomate esas vacaciones</h2>
         </div>
         <CardContainer />
         <div className={s.btnAndComment}>
