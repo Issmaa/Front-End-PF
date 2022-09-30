@@ -5,6 +5,7 @@ import validate from "./validator";
 import LoginGoogle from "../loginGoogle/loginGoogle";
 
 export default function Login() {
+  const [loader, setLoader] = useState(false);
   const [input, setInput] = useState({
     username: "",
     email: "",
@@ -59,6 +60,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!Object.keys(error).length || error.username) {
+      setLoader(true)
       // dispatch();
       console.log("register");
     }

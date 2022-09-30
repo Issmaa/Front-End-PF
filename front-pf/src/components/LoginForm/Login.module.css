@@ -50,8 +50,6 @@
 .line {
   border: 2px solid rgba(91, 192, 190, 0.486);
   margin-top: 60px;
-}
-
 
 #eye{
   position: absolute;
@@ -82,11 +80,12 @@
   position: relative;
   height: 20px;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .inputField input {
   height: 100%;
+  margin-top: 10px;
   width: 100%;
   padding: 3px 35px;
   padding-top: 28px;
@@ -169,7 +168,7 @@
   justify-content: center;
 }
 
-.loginButton input {
+.loginButton button {
   width: 320vw;
   height: 5vh;
   margin: 15px;
@@ -180,16 +179,19 @@
   transition: 0.2s;
   background-color: #5bc0beff;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginButton input:hover {
+.loginButton button:hover {
   background-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   transition: 0.2s;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.loginButton input:active {
+.loginButton button:active {
   background-color: rgba(212, 212, 212, 0.4);
 }
 
