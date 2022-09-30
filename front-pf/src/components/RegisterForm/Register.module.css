@@ -300,9 +300,9 @@
   justify-content: center;
 }
 
-.loginButton input {
-  width: 300vw;
-  height: 6vh;
+.loginButton button {
+  width: 320vw;
+  height: 5.5vh;
   margin: 15px;
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -311,17 +311,19 @@
   transition: 0.2s;
   background-color: #5bc0beff;
   color: white;
-  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginButton input:hover {
+.loginButton button:hover {
   background-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   transition: 0.2s;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.loginButton input:active {
+.loginButton button:active {
   background-color: rgba(212, 212, 212, 0.4);
 }
 

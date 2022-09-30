@@ -33,15 +33,22 @@
 
 .Or{
   color: rgb(64, 192, 190);
-  font-size: 24px;
+  position: absolute;
+  right: 200px;
+  font-size: 22px;
   margin: 0;
-  margin-top: 40px;
+  margin-top: 10px;
+}
+
+.line {
+  border: 1px solid rgba(91, 192, 190, 0.486);
+  margin-top: 50px;
 }
 
 #eye{
   position: absolute;
   right: 0;
-  bottom: 214px;
+  bottom: 228px;
   cursor: pointer;
   margin-left: 300px;
 }
@@ -68,11 +75,12 @@
   position: relative;
   height: 20px;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .inputField input {
   height: 100%;
+  margin-top: 10px;
   width: 100%;
   padding: 3px 35px;
   padding-top: 28px;
@@ -92,7 +100,7 @@
 .inputField i {
   position: absolute;
   left: 35px;
-  transform: translateY(29px);
+  transform: translateY(39px);
   font-size: 17px;
   color: rgba(0, 0, 0, 0.85);
   transition: 0.3s;
@@ -154,7 +162,7 @@
   justify-content: center;
 }
 
-.loginButton input {
+.loginButton button {
   width: 320vw;
   height: 5vh;
   margin: 15px;
@@ -165,16 +173,19 @@
   transition: 0.2s;
   background-color: #5bc0beff;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginButton input:hover {
+.loginButton button:hover {
   background-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   transition: 0.2s;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.loginButton input:active {
+.loginButton button:active {
   background-color: rgba(212, 212, 212, 0.4);
 }
 
