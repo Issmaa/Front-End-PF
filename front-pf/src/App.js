@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register"
 import CreateCard from "./pages/CreateCard"
 import Destinations from './pages/Destinations/Destinations';
+import AboutUs from './pages/AboutUs/AboutUs.jsx';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route path="/cards/create" element={<CreateCard />}/>
         <Route path="/destinations" element={<Destinations/>}></Route>
+        <Route path="/aboutus" element={<AboutUs />}/>
       </Routes>
     </div>
   );

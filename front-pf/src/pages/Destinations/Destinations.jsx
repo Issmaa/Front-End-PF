@@ -1,43 +1,88 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 import SideBar from "../../components/SideBar/SideBar.jsx";
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
+import SearchBar from './../../components/SearchBar/SearchBar';
+import CardDestinations from '../../components/CardDestinations/CardDestinations';
+import { useDispatch, useSelector } from 'react-redux';
+import { getHotels } from '../../redux/actions';
+import data from '../../data/MOCK_DATA.json';
+import Cards from '../../components/Cards/Cards'
+import Pagination from './../../components/Pagination/Pagination';
+
 
 
 export default function Destinations() {
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getHotels())
+  },[dispatch])
+
+  const hotels = useSelector(state=> state.hotels);
+   //PAGINADO
+   const [currentPage,setCurrentPage] = useState(1);
+   const [resultsPorPagina] = useState(3);
+   
+   const indiceUltimo = currentPage * resultsPorPagina;
+   const indicePrimero = indiceUltimo - resultsPorPagina;
+   let infoHotels = hotels.slice(indicePrimero, indiceUltimo);
+   
+   
+   
+   
+   //Cambio de pagina
+ function pagina(pageNumber){
+   return setCurrentPage(pageNumber)
+ }
+
+ const nextPage = () => {
+    if( data.length > currentPage + 1){
+      return setCurrentPage(currentPage + 1);
+    } else {
+      return setCurrentPage(currentPage);
+    }
+  }
+ const prevPage = () => {
+  if(currentPage > 1){
+     setCurrentPage(currentPage - 1);
+  }
+}
+  
+
+  
+
+  console.log(hotels);
   return (
     <div>
       <NavBar/>
       <SideBar/>
       <div className='mx-24 my-4'>
       <div className="flex justify-start mx-4 my-2 ">
-      <span className='text-xl text-start'>Destinations</span>
+      <span className='text-2xl text-start'>Destinations</span>
       </div>
-      <div className='flex justify-center'>
-      <nav aria-label="Page navigation example d-flex p-2">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
+
+      <Pagination 
+      resultsPorPagina={resultsPorPagina} 
+      totalResults={data.length} 
+      pagina={pagina}
+      nextPage={nextPage}
+      prevPage={prevPage}
+      />
+
+      <div className='flex justify-end'>
+        <select  className='mx-2 bg-white text-1-color rounded-lg border-2 border-1-color'>
+          <option value={''}>Filtro 1</option>
+          <option value={'DataBase'}>A-Z</option>
+          <option value={'Api'}>Z-A</option>
+        </select>
+        <select  className='mx-2 bg-white text-1-color rounded-lg border-2 border-1-color'>
+          <option value={''}>Filtro 2</option>
+          <option value={'DataBase'}>Low price</option>
+          <option value={'Api'}>High Price</option>
+        </select>
       </div>
-<div className='flex justify-end'>
-  <select>
-    <option>Opcion 1</option>
-      <option>Opcion 2</option>
-  </select>
-  </div>
-
-
+  <Cards hotels={infoHotels}/>
     </div>
     </div>
   )
