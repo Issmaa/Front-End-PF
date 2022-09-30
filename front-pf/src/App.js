@@ -17,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route path="/cards/create" element={<CreateCard />}/>
         <Route path="/destinations" element={<Destinations/>}/>
+        <Route path="/excursiones" element={<Excursiones/>}/>
       </Routes>
     </div>
   );
