@@ -31,7 +31,7 @@ export default function Login() {
   const [error, setError] = useState({});
 
   const handleClick = (e) => {
-    if(!error[`${e.target.name}`]) {
+    if(!click[`${e.target.name}`]) {
       setClick({
         ...click,
         [e.target.name]: !click[`${e.target.name}`] 
@@ -39,8 +39,9 @@ export default function Login() {
     }
   }
 
-  console.log(click)
+console.log(error)
 
+  
   const handleInputChange = (e) => {
     setInput({
       ...input,
@@ -53,6 +54,15 @@ export default function Login() {
         [e.target.name]: e.target.value,
       })
     );
+  };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!Object.keys(error).length || error.username) {
+      // dispatch();
+      console.log("register");
+    }
   };
 
   return (
@@ -82,7 +92,7 @@ export default function Login() {
                 </div>
                 <div className={s.inputField}>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="Email"
                     autoCapitalize="off"
@@ -117,6 +127,7 @@ export default function Login() {
                     autoComplete="off"
                     onChange={handleInputChange}
                     spellCheck="off"
+                    onClick={handleClick}
                     required
                     name="date_of_birth"
                     value={input.date_of_birth}
@@ -139,7 +150,8 @@ export default function Login() {
                       name="phone_number"
                       value={input.phone_number}
                       placeholder="Phone Number"
-                      onChange={handleInputChange}
+                    onClick={handleClick}
+                    onChange={handleInputChange}
                       autoCapitalize="off"
                       required
                     />
@@ -152,7 +164,8 @@ export default function Login() {
                       type="text"
                       placeholder="PIN Code"
                       onChange={handleInputChange}
-                      autoCapitalize="off"
+                    onClick={handleClick}
+                    autoCapitalize="off"
                       required
                     />
                     <button className={s.pinBtn}>SEND</button>
@@ -167,7 +180,8 @@ export default function Login() {
                       type="text"
                       name="first_name"
                       value={input.first_name}
-                      onChange={handleInputChange}
+                    onClick={handleClick}
+                    onChange={handleInputChange}
                       placeholder="First Name"
                       autoCapitalize="off"
                       required
@@ -184,7 +198,8 @@ export default function Login() {
                       name="last_name"
                       value={input.last_name}
                       placeholder="Last Name"
-                      onChange={handleInputChange}
+                    onClick={handleClick}
+                    onChange={handleInputChange}
                       autoCapitalize="off"
                       required
                     />
@@ -199,7 +214,8 @@ export default function Login() {
                       id="name"
                       type="text"
                       name="city"
-                      value={input.city}
+                    onClick={handleClick}
+                    value={input.city}
                       onChange={handleInputChange}
                       placeholder="City"
                       autoCapitalize="off"
@@ -213,7 +229,8 @@ export default function Login() {
                       type="text"
                       name="zip_code"
                       value={input.zip_code}
-                      placeholder="Zip Code"
+                    onClick={handleClick}
+                    placeholder="Zip Code"
                       onChange={handleInputChange}
                       autoCapitalize="off"
                       required
@@ -229,6 +246,7 @@ export default function Login() {
                     type="text"
                     name="address"
                     value={input.address}
+                    onClick={handleClick}
                     placeholder="Address"
                     autoCapitalize="off"
                     onChange={handleInputChange}
@@ -240,7 +258,7 @@ export default function Login() {
                 {/* Button */}
 
                 <div className={s.loginButton}>
-                  <input type="button" value="Create Account" />
+                  <input type="button" value="Create Account" onClick={handleSubmit}/>
                 </div>
               </form>
               <div className={s.loginSignup}>

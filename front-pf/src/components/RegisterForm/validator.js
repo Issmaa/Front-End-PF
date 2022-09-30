@@ -10,10 +10,9 @@ export function isValidDate(str) {
 
 // Corrobora que el email sea valido
 export function isValidEmail(str) {
-  const regexValidEmail =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
 
-  return regexValidEmail.test(str);
+  return regex.test(str);
 }
 
 // Corrobora si hay caracteres especiales entro del str.
@@ -37,10 +36,8 @@ export default function validate(input) {
 
   if (!input.email) {
     error.email = "Email is required";
-  } else if (isValidEmail(input.email)) {
-    error.description = "Email not valid";
-  } else if (input.description.trim() === "") {
-    error.description = "Email may not be empty";
+  } else if (!isValidEmail(input.email)) {
+    error.email = "Email is not Valid";
   }
 
   if (isValidDate(input.date_of_birth)) {
@@ -58,27 +55,25 @@ export default function validate(input) {
   }
 
   if (!input.first_name) {
-    error.first_name = "Name is required"
+    error.first_name = "Name is required";
   } else if (hasSpecialChars(input.first_name)) {
     error.first_name = "Name may not contain special characters";
   }
 
   if (!input.last_name) {
-    error.last_name = "Last name is required"
+    error.last_name = "Last name is required";
   } else if (hasSpecialChars(input.first_name)) {
     error.last_name = "Last name may not contain special characters";
   }
 
   if (!input.zip_code) {
-    error.zip_code = "Zip code is required"
-  } else if (typeof(input.zip_code) !== "Number") {
-    error.zip_code = "Zip code must be only a Number"
+    error.zip_code = "Zip code is required";
   }
 
-  if(!input.address) {
-    error.address = "Address is required"
+  if (!input.address) {
+    error.address = "Address is required";
   } else if (hasSpecialChars(input.address)) {
-    error.address = "Address may not contain special characters"
+    error.address = "Address may not contain special characters";
   }
   return error;
 }
