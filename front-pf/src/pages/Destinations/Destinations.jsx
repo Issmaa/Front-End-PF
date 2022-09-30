@@ -1,12 +1,7 @@
 import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 import SideBar from "../../components/SideBar/SideBar.jsx";
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
+
 
 
 export default function Destinations() {
