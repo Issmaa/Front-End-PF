@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import s from "./Login.module.css";
 import validate from "./validator";
+import Loader from "../Loader/Loader";
 
 export default function Login() {
   const [passEye, setPassEye] = useState(false);
+  const [loader, setLoader] = useState(false);
 
   const toggleEye = () => {
     setPassEye(!passEye);
@@ -38,9 +40,10 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      (!error.password && !error.email) && !error.email ||
+      (!error.password && !error.email && !error.email) ||
       (!error.password && !error.username && !error.email)
     ) {
+      setLoader(true);
       // dispatch();
       console.log("login");
     }
@@ -101,6 +104,7 @@ export default function Login() {
                     <p className={s.error}>{error.email}</p>
                   )}
                 </div>
+                <div className={s.line}></div>
                 <div className={s.inputField}>
                   <input
                     type={!passEye && "password"}
@@ -135,11 +139,9 @@ export default function Login() {
                 </div>
 
                 <div className={s.loginButton}>
-                  <input
-                    type="button"
-                    value="Login Now"
-                    onClick={handleSubmit}
-                  />
+                  <button onClick={handleSubmit}>
+                    {loader ? <Loader /> : "Login Now"}
+                  </button>
                 </div>
               </form>
 

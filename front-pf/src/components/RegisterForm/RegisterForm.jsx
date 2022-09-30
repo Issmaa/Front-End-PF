@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import s from "./Register.module.css";
 import validate from "./validator";
+import Loader from "../Loader/Loader";
 
 export default function Login() {
+  const [loader, setLoader] = useState(false);
   const [input, setInput] = useState({
     username: "",
     email: "",
@@ -60,6 +62,7 @@ console.log(error)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!Object.keys(error).length || error.username) {
+      setLoader(true)
       // dispatch();
       console.log("register");
     }
@@ -258,7 +261,9 @@ console.log(error)
                 {/* Button */}
 
                 <div className={s.loginButton}>
-                  <input type="button" value="Create Account" onClick={handleSubmit}/>
+                  <button onClick={handleSubmit}>
+                    {loader ? <Loader /> : "Create Account"}
+                  </button>
                 </div>
               </form>
               <div className={s.loginSignup}>
