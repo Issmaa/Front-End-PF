@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import s from "./Register.module.css";
 import validate from "./validator";
-import Loader from "../Loader/Loader";
+import LoginGoogle from "../loginGoogle/loginGoogle";
 
 export default function Login() {
   const [loader, setLoader] = useState(false);
@@ -28,22 +28,21 @@ export default function Login() {
     last_name: false,
     zip_code: false,
     address: false,
-  })
+  });
 
   const [error, setError] = useState({});
 
   const handleClick = (e) => {
-    if(!click[`${e.target.name}`]) {
+    if (!click[`${e.target.name}`]) {
       setClick({
         ...click,
-        [e.target.name]: !click[`${e.target.name}`] 
-      })
+        [e.target.name]: !click[`${e.target.name}`],
+      });
     }
-  }
+  };
 
-console.log(error)
+  console.log(error);
 
-  
   const handleInputChange = (e) => {
     setInput({
       ...input,
@@ -57,7 +56,6 @@ console.log(error)
       })
     );
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -105,7 +103,9 @@ console.log(error)
                     onChange={handleInputChange}
                   />
                   <i class="uil uil-envelope icon"></i>
-                  {click.email && error.email && <p className={s.error}>{error.email}</p>}
+                  {click.email && error.email && (
+                    <p className={s.error}>{error.email}</p>
+                  )}
                 </div>
                 <div className={s.inputField}>
                   <input
@@ -138,42 +138,10 @@ console.log(error)
                   <i class="uil uil-user"></i>
                   {click.date_of_birth && error.date_of_birth && (
                     <p className={s.error}>{error.date_of_birth}</p>
-                    )}
+                  )}
                 </div>
 
                 {/* Phone and PIN numbers */}
-                <div className={s.line}></div>
-
-                <div className={s.phoneContainer}>
-                  <i class="uil uil-shield-check" id={s.phoneShield}></i>
-                  <div className={s.phoneCountryCode}>+54</div>
-                  <div className={s.phoneInput}>
-                    <input
-                      type="text"
-                      name="phone_number"
-                      value={input.phone_number}
-                      placeholder="Phone Number"
-                    onClick={handleClick}
-                    onChange={handleInputChange}
-                      autoCapitalize="off"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className={s.pinContainer}>
-                  <div className={s.pinInput}>
-                    <input
-                      type="text"
-                      placeholder="PIN Code"
-                      onChange={handleInputChange}
-                    onClick={handleClick}
-                    autoCapitalize="off"
-                      required
-                    />
-                    <button className={s.pinBtn}>SEND</button>
-                  </div>
-                </div>
                 <div className={s.line}></div>
 
                 <div className={s.firstLastNameContainer}>
@@ -183,8 +151,8 @@ console.log(error)
                       type="text"
                       name="first_name"
                       value={input.first_name}
-                    onClick={handleClick}
-                    onChange={handleInputChange}
+                      onClick={handleClick}
+                      onChange={handleInputChange}
                       placeholder="First Name"
                       autoCapitalize="off"
                       required
@@ -201,8 +169,8 @@ console.log(error)
                       name="last_name"
                       value={input.last_name}
                       placeholder="Last Name"
-                    onClick={handleClick}
-                    onChange={handleInputChange}
+                      onClick={handleClick}
+                      onChange={handleInputChange}
                       autoCapitalize="off"
                       required
                     />
@@ -211,29 +179,50 @@ console.log(error)
                     )}
                   </div>
                 </div>
+
+                <div className={s.inputField}>
+                  <input
+                    type="text"
+                    name="phone_number"
+                    value={input.phone_number}
+                    placeholder="Phone Number"
+                    autoCapitalize="off"
+                    onClick={handleClick}
+                    required
+                    onChange={handleInputChange}
+                  />
+                  <i class="uil uil-mobile-android" />
+                  {click.phone_number && error.phone_number && (
+                    <p className={s.error}>{error.phone_number}</p>
+                  )}
+                </div>
                 <div className={s.firstLastNameContainer}>
                   <div className={`${s.nameContainer} ${s.inputField}`}>
                     <input
                       id="name"
                       type="text"
                       name="city"
-                    onClick={handleClick}
-                    value={input.city}
+                      onClick={handleClick}
+                      value={input.city}
                       onChange={handleInputChange}
                       placeholder="City"
                       autoCapitalize="off"
                       required
                     />
                     <i class="uil uil-map "></i>
+                    {click.city && error.city && (
+                    <p className={s.error}>{error.city}</p>
+                  )}
                   </div>
                   <div className={s.lastnameContainer}>
+                  <p id={s.dateOfBirth}>Optional</p>
                     <input
                       id="lastname"
                       type="text"
                       name="zip_code"
                       value={input.zip_code}
-                    onClick={handleClick}
-                    placeholder="Zip Code"
+                      onClick={handleClick}
+                      placeholder="Zip Code"
                       onChange={handleInputChange}
                       autoCapitalize="off"
                       required
@@ -245,6 +234,8 @@ console.log(error)
                 </div>
 
                 <div className={s.inputField}>
+                <p id={s.dateOfBirth}>Optional</p>
+
                   <input
                     type="text"
                     name="address"
@@ -256,14 +247,22 @@ console.log(error)
                     required
                   />
                   <i class="uil uil-map-marker"></i>
-                  {click.address && error.address && <p className={s.error}>{error.address}</p>}
+                  {click.address && error.address && (
+                    <p className={s.error}>{error.address}</p>
+                  )}
                 </div>
                 {/* Button */}
 
                 <div className={s.loginButton}>
-                  <button onClick={handleSubmit}>
-                    {loader ? <Loader /> : "Create Account"}
-                  </button>
+                  <input
+                    type="button"
+                    value="Create Account"
+                    onClick={handleSubmit}
+                  />
+                </div>
+                <div className={s.googleBtn}>
+                  <p id={s.googleOr}>Sign in With Google</p>
+                  <LoginGoogle />
                 </div>
               </form>
               <div className={s.loginSignup}>

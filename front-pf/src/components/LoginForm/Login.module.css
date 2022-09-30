@@ -14,6 +14,13 @@
   justify-content: center;
 }
 
+
+#googleOr{
+  color: rgb(64, 192, 190);
+  font-size: 18px;
+  margin-top: 10px;
+}
+
 .formContainer {
   position: relative;
   max-width: 430px;
@@ -33,22 +40,20 @@
 
 .Or{
   color: rgb(64, 192, 190);
+  font-size: 19px;
   position: absolute;
-  right: 200px;
-  font-size: 22px;
-  margin: 0;
-  margin-top: 10px;
+  left: 200px;
+  top: 147px;
+  margin-top: 5px;
 }
 
 .line {
-  border: 1px solid rgba(91, 192, 190, 0.486);
-  margin-top: 50px;
-}
+  border: 2px solid rgba(91, 192, 190, 0.486);
+  margin-top: 60px;
 
 #eye{
   position: absolute;
   right: 0;
-  bottom: 228px;
   cursor: pointer;
   margin-left: 300px;
 }
@@ -90,6 +95,7 @@
   border-bottom: 2px solid grey;
   border-top: 2px solid transparent;
   transition: 0.3s;
+  margin-top: 10px;
 }
 
 .inputField input:is(:focus, :valid) {

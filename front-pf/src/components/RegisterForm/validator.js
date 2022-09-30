@@ -54,6 +54,15 @@ export default function validate(input) {
     error.password = "The Password must have at least 8 characters";
   }
 
+  if(!input.phone_number) {
+    error.phone_number = "Phone number is required"
+  } else if (input.phone_number.length > 10) {
+    error.phone_number = "Invalid phone number"
+  }
+
+
+
+
   if (!input.first_name) {
     error.first_name = "Name is required";
   } else if (hasSpecialChars(input.first_name)) {
@@ -66,13 +75,13 @@ export default function validate(input) {
     error.last_name = "Last name may not contain special characters";
   }
 
-  if (!input.zip_code) {
-    error.zip_code = "Zip code is required";
+  if(!input.city) {
+    error.city = "City is required"
+  } else if(hasSpecialChars(input.city)) {
+    error.city = "City may not contain special characters"
   }
 
-  if (!input.address) {
-    error.address = "Address is required";
-  } else if (hasSpecialChars(input.address)) {
+  if (hasSpecialChars(input.address)) {
     error.address = "Address may not contain special characters";
   }
   return error;
