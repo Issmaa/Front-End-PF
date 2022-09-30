@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import s from "./Login.module.css";
 import validate from "./validator";
+import LoginGoogle from "../loginGoogle/loginGoogle";
 
 export default function Login() {
   const [passEye, setPassEye] = useState(false);
@@ -38,7 +39,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      (!error.password && !error.email) && !error.email ||
+      (!error.password && !error.email && !error.email) ||
       (!error.password && !error.username && !error.email)
     ) {
       // dispatch();
@@ -101,7 +102,13 @@ export default function Login() {
                     <p className={s.error}>{error.email}</p>
                   )}
                 </div>
+                <div className={s.line}></div>
                 <div className={s.inputField}>
+                  <i
+                    id={s.eye}
+                    class={!passEye ? "uil uil-eye-slash" : "uil uil-eye"}
+                    onClick={toggleEye}
+                  ></i>
                   <input
                     type={!passEye && "password"}
                     placeholder="Password"
@@ -112,11 +119,6 @@ export default function Login() {
                     required
                   />
                   <i class="uil uil-lock"></i>
-                  <i
-                    id={s.eye}
-                    class={!passEye ? "uil uil-eye-slash" : "uil uil-eye"}
-                    onClick={toggleEye}
-                  ></i>
                   {click.password && error.password && (
                     <p className={s.error}>{error.password}</p>
                   )}
@@ -142,7 +144,10 @@ export default function Login() {
                   />
                 </div>
               </form>
-
+              <div className={s.googleBtn}>
+              <p id={s.googleOr}>Sign in With Google</p>
+                <LoginGoogle />
+              </div>
               <div className={s.loginSignup}>
                 <span className="text">
                   Not a member? <Link to="/register">SignUp Now</Link>

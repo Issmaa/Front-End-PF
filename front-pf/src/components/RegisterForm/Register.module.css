@@ -15,10 +15,26 @@
   width: 90%;
 }
 
+
+.container{
+  display: flex;
+}
+
+#optional{
+  border: 1px solid red;
+  position: absolute;
+}
+
+#googleOr{
+  color: rgb(64, 192, 190);
+  font-size: 18px;
+  margin-top: 0px;
+}
+
 .line {
-  border: 1px solid rgba(91, 192, 190, 0.486);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  border: 2px solid rgba(91, 192, 190, 0.486);
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .phoneContainer {
