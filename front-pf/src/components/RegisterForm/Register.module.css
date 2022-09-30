@@ -15,16 +15,48 @@
   width: 90%;
 }
 
+
+.container{
+  display: flex;
+}
+
+#optional{
+  border: 1px solid red;
+  position: absolute;
+}
+
+#googleOr{
+  color: rgb(64, 192, 190);
+  font-size: 18px;
+  margin-top: 0px;
+}
+
 .line {
-  border: 1px solid rgba(91, 192, 190, 0.486);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  border: 2px solid rgba(91, 192, 190, 0.486);
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .phoneContainer {
   display: flex;
   justify-content: center;
+  position: relative;
 }
+
+#phoneShield{
+  position: absolute;
+  left: 40px;
+  bottom: 9px;
+}
+
+#dateOfBirth{
+  position: absolute;
+  right: 40px;
+  margin-top: 62px;
+  font-size: 14px;
+  color: grey;
+}
+
 
 .phoneCountryCode {
   border: 1px solid #5bc0beff;
@@ -36,6 +68,8 @@
   align-items: center;
 }
 
+
+
 .phoneInput input {
   height: 40px;
   width: 200px;
@@ -45,6 +79,13 @@
   border: none;
   border: 2px solid transparent;
 }
+
+.error{
+  position: absolute;
+  color: rgba(255, 0, 0, 0.5);
+}
+
+
 
 .phoneInput input:focus {
   outline: none;
@@ -275,9 +316,9 @@
   justify-content: center;
 }
 
-.loginButton input {
-  width: 300vw;
-  height: 6vh;
+.loginButton button {
+  width: 320vw;
+  height: 5.5vh;
   margin: 15px;
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -286,16 +327,19 @@
   transition: 0.2s;
   background-color: #5bc0beff;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginButton input:hover {
+.loginButton button:hover {
   background-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   transition: 0.2s;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.loginButton input:active {
+.loginButton button:active {
   background-color: rgba(212, 212, 212, 0.4);
 }
 

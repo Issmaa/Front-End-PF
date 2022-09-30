@@ -14,6 +14,13 @@
   justify-content: center;
 }
 
+
+#googleOr{
+  color: rgb(64, 192, 190);
+  font-size: 18px;
+  margin-top: 10px;
+}
+
 .formContainer {
   position: relative;
   max-width: 430px;
@@ -30,6 +37,27 @@
 .title {
   color: rgba(0, 0, 0, 0.85);
 }
+
+.Or{
+  color: rgb(64, 192, 190);
+  font-size: 19px;
+  position: absolute;
+  left: 200px;
+  top: 147px;
+  margin-top: 5px;
+}
+
+.line {
+  border: 2px solid rgba(91, 192, 190, 0.486);
+  margin-top: 60px;
+
+#eye{
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  margin-left: 300px;
+}
+
 
 .formContainer .forms .title {
   position: relative;
@@ -50,22 +78,24 @@
 
 .form .inputField {
   position: relative;
-  height: 50px;
+  height: 20px;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .inputField input {
   height: 100%;
+  margin-top: 10px;
   width: 100%;
   padding: 3px 35px;
-  padding-top: 30px;
+  padding-top: 28px;
   border: none;
   outline: none;
   background-color: transparent;
   border-bottom: 2px solid grey;
   border-top: 2px solid transparent;
   transition: 0.3s;
+  margin-top: 10px;
 }
 
 .inputField input:is(:focus, :valid) {
@@ -76,7 +106,7 @@
 .inputField i {
   position: absolute;
   left: 35px;
-  transform: translateY(29px);
+  transform: translateY(39px);
   font-size: 17px;
   color: rgba(0, 0, 0, 0.85);
   transition: 0.3s;
@@ -107,6 +137,12 @@
   accent-color: #5bc0beff;
 }
 
+
+.error{
+  position: absolute;
+  color: rgba(255, 0, 0, 0.5);
+}
+
 .checkboxContent input:hover {
   cursor: pointer;
 }
@@ -132,7 +168,7 @@
   justify-content: center;
 }
 
-.loginButton input {
+.loginButton button {
   width: 320vw;
   height: 5vh;
   margin: 15px;
@@ -143,16 +179,19 @@
   transition: 0.2s;
   background-color: #5bc0beff;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginButton input:hover {
+.loginButton button:hover {
   background-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   transition: 0.2s;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.loginButton input:active {
+.loginButton button:active {
   background-color: rgba(212, 212, 212, 0.4);
 }
 

@@ -1,8 +1,10 @@
-.container{
-    width: auto;
-    height: auto;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+  width: auto;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 
+  background-image: url("../../../public/images/bg_home4.jpg"); */
+  /*  background-size: cover; */
 }

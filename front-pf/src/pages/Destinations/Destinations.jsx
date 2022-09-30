@@ -1,13 +1,13 @@
 import React, { useEffect,useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import NavBar from '../../components/NavBar/NavBar'
 import SideBar from "../../components/SideBar/SideBar.jsx";
 import SearchBar from './../../components/SearchBar/SearchBar';
 import CardDestinations from '../../components/CardDestinations/CardDestinations';
-import { useDispatch, useSelector } from 'react-redux';
 import { getHotels } from '../../redux/actions';
-import data from '../../data/MOCK_DATA.json';
 import Cards from '../../components/Cards/Cards'
 import Pagination from './../../components/Pagination/Pagination';
+
 
 
 
