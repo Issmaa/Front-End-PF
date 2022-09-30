@@ -15,7 +15,7 @@ export default function SideBar() {
         <Link to='/destinations' className='m-6 hover:text-3-color transition ease-in duration-200 text-1-color'>
             <div className='bg-white w-16 h-16 rounded-full flex items-center justify-center border-slate-700 border'><FlightIcon  sx={{ fontSize: 40 }}/></div>
         </Link>
-        <Link to='#' className='m-6 hover:text-orange-500 transition ease-in duration-200 text-1-color'>
+        <Link to='/excursiones' className='m-6 hover:text-orange-500 transition ease-in duration-200 text-1-color'>
             <div className='bg-white w-16 h-16 rounded-full flex items-center justify-center border-slate-700 border'><LandscapeIcon  sx={{ fontSize: 40 }}/></div>
         </Link>
         <Link to='#' className='m-6 hover:text-zinc-400 transition ease-in duration-200 text-1-color'>

@@ -107,6 +107,12 @@
   accent-color: #5bc0beff;
 }
 
+
+.error{
+  position: absolute;
+  color: rgba(255, 0, 0, 0.5);
+}
+
 .checkboxContent input:hover {
   cursor: pointer;
 }
