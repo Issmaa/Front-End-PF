@@ -4,19 +4,49 @@ import s from "./Login.module.css";
 import validate from "./validator";
 
 export default function Login() {
-  const [passEye, setPassEye] = useState("password");
+  const [passEye, setPassEye] = useState(false);
 
   const toggleEye = () => {
-    if (passEye === "password") setPassEye("text");
-    if (passEye === "text") setPassEye("password");
+    setPassEye(!passEye);
   };
 
+  console.log(passEye);
+
   const [input, setInput] = useState({
-    email_or_username: "",
+    username: "",
+    email: "",
     password: "",
   });
 
+  const [click, setClick] = useState({
+    username: false,
+    email: false,
+    password: false,
+  });
+
   const [error, setError] = useState({});
+
+  const handleClick = (e) => {
+    if (!click[`${e.target.name}`]) {
+      setClick({
+        ...click,
+        [e.target.name]: !click[`${e.target.name}`],
+      });
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      (!error.password && !error.email) && !error.email ||
+      (!error.password && !error.username && !error.email)
+    ) {
+      // dispatch();
+      console.log("login");
+    }
+  };
+
+  console.log(error);
 
   const handleInputChange = (e) => {
     setInput({
@@ -43,26 +73,53 @@ export default function Login() {
                 <div className={s.inputField}>
                   <input
                     type="text"
-                    value={input.email_or_username}
-                    name="email_or_username"
+                    value={input.username}
+                    name="username"
                     onChange={handleInputChange}
-                    placeholder="Email or Username"
+                    placeholder="Username"
+                    onClick={handleClick}
                     required
                   />
                   <i class="uil uil-envelope icon"></i>
-                  {error.email_or_username && <p className={s.error}>{error.email_or_username}</p>}
+                  {click.username && error.username && (
+                    <p className={s.error}>{error.username}</p>
+                  )}
+                </div>
+                <p className={s.Or}>Or</p>
+                <div id={s.id} className={s.inputField}>
+                  <input
+                    type="text"
+                    value={input.email}
+                    name="email"
+                    onChange={handleInputChange}
+                    placeholder="Email"
+                    onClick={handleClick}
+                    required
+                  />
+                  <i class="uil uil-envelope icon"></i>
+                  {click.email && error.email && (
+                    <p className={s.error}>{error.email}</p>
+                  )}
                 </div>
                 <div className={s.inputField}>
                   <input
-                    type={passEye}
+                    type={!passEye && "password"}
                     placeholder="Password"
                     name="password"
                     onChange={handleInputChange}
+                    onClick={handleClick}
                     value={input.password}
                     required
                   />
                   <i class="uil uil-lock"></i>
-                  {error.password && <p className={s.error}>{error.password}</p>}
+                  <i
+                    id={s.eye}
+                    class={!passEye ? "uil uil-eye-slash" : "uil uil-eye"}
+                    onClick={toggleEye}
+                  ></i>
+                  {click.password && error.password && (
+                    <p className={s.error}>{error.password}</p>
+                  )}
                 </div>
                 <div className={s.checkboxText}>
                   <div className={s.checkboxContent}>
@@ -78,7 +135,11 @@ export default function Login() {
                 </div>
 
                 <div className={s.loginButton}>
-                  <input type="button" value="Login Now" />
+                  <input
+                    type="button"
+                    value="Login Now"
+                    onClick={handleSubmit}
+                  />
                 </div>
               </form>
 
