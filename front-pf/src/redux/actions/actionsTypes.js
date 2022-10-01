@@ -4,4 +4,4 @@ export const GET_ALL_EXCURSION = "GET_ALL_EXCURSION";
 export const CREATE_USER = "CREATE_USER";
 export const GET_ALL_HOTEL = "GET_ALL_HOTEL";
 export const GET_CURRENT_USER = "GET_CURRENT_USER"
-
+export const GET_PACK_BY_ID = "GET_PACK_BY_ID"

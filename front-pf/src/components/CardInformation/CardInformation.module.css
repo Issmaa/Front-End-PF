@@ -1,57 +1,113 @@
-.container{
-    width: 100vw;
-    height: 80vh;
-    border: 1px solid red;
-    position: relative;
+.mainContainer {
+  background-image: url("https://www.10wallpaper.com/wallpaper/1366x768/1508/argentina_mountain_lake-Scenery_HD_Wallpaper_1366x768.jpg");
+  background-size: 100% 100%;
 }
 
-.imgContainer{
-    border: 1px solid red;
-    height: 40vh;
-    width: 100%;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 120vh;
+  position: relative;
 }
 
-.imgContainer img{
-    height: 100%;
-    width: 70%;
+.imgContainer {
+  height: 40vh;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.infoContainer{
-    border: 1px solid blue;
-    height: 40vh;
+.imgContainer img {
+  height: 100%;
+  margin-top: 30px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.loreContainer{
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    height: 35vh;
-    align-items: center;
+.infoContainer {
+  height: 40vh;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.lore{
-    overflow-wrap: break-word;
-    border: 1px solid red;
-    width: 70%;
-    height: 100px;
+.loreContainer h1 {
+  margin-top: 40px;
+  position: absolute;
+  background-color: #1c2541ff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 20px;
+  width: 25vh;
+  padding: 3px 15px 8px 15px;
+  transition: 0.2s;
+  top: 40vh;
 }
 
-.elseContainer{
-    border: 1px solid green;
-    height: 25vh;
-    width: 70%;
-    display: flex;
-
+.loreContainer {
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  height: 35vh;
+  align-items: center;
 }
 
-.actContainer{
-    border: 1px solid red;
-    height: 25vh;
-    width: 50%;
-    text-align: center;
+.lore {
+  overflow-wrap: break-word;
+  width: 70%;
+  height: auto;
+  font-size: 2.5vh;
+  background-color: #0b132bff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
+.elseContainer {
+  height: 25vh;
+  margin-top: 50px;
+  width: 70%;
+  display: flex;
+}
+
+.actContainer h2 {
+  font-size: 4vh;
+}
+
+.actContainer {
+  height: 28vh;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  background-color: #0b132bff;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.actContainer a {
+  text-decoration: none;
+  color: #5bc0beff;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: #0b132bff;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+#act {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#hot {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.actContainer a:hover {
+  color: #1c2541ff;
+  background-color: #5bc0beff;
+  transition: 0.2s;
+}
