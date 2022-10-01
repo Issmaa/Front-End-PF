@@ -1,8 +1,11 @@
+
 import {
   GET_ALL_EXCURSION,
   GET_ALL_PACKS,
   GET_ALL_HOTEL,
 } from "./actionsTypes";
+import { CREATE_USER, GET_CURRENT_USER } from "./actionsTypes";
+
 const axios = require("axios");
 
 export function getHotels() {
@@ -13,6 +16,7 @@ export function getHotels() {
   };
 }
 
+
 export function getExcursiones() {
   return (dispatch) => {
     axios("http://localhost:5000/excursiones")
@@ -20,3 +24,13 @@ export function getExcursiones() {
       .catch((error) => console.log(error));
   };
 }
+
+// export const createUser = (payload) => async (dispatch) => {
+//   const newUser = axios.post("http://localhost:5000/signup", payload);
+//   dispatch({ type: CREATE_USER, payload: newUser });
+// };
+
+export const getCurrentUser = (obj) => (dispatch) => {
+  dispatch({ type: GET_CURRENT_USER, payload: obj });
+};
+
