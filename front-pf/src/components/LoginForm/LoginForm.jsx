@@ -36,14 +36,22 @@ export default function Login() {
     }
   };
 
+  console.log(input)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      (!error.password && !error.email && !error.email) ||
-      (!error.password && !error.username && !error.email)
+      (!error.password && !error.email && !error.email && input.username !== "") ||
+      (!error.password && !error.username && !error.email && input.username !== "") 
     ) {
       // dispatch();
       console.log("login");
+    } else {
+      setClick({
+        username: true,
+        email: true,
+        password: true,
+      })
     }
   };
 

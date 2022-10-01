@@ -1,2 +1,3 @@
 export const CREATE_USER = "CREATE_USER";
 export const GET_ALL_HOTEL = "GET_ALL_HOTEL";
+export const GET_CURRENT_USER = "GET_CURRENT_USER"
