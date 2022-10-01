@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import Cards from "../Card/Card";
+import Card2 from "../Card2/Card2";
 
 function Carrusel() {
   return (
@@ -9,7 +10,7 @@ function Carrusel() {
         <Cards />
       </Carousel.Item>
       <Carousel.Item>
-        <Cards />
+        <Card2 />
       </Carousel.Item>
       <Carousel.Item>
         <Cards />

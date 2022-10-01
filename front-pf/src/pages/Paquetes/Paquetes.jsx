@@ -3,12 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import NavBar from '../../components/NavBar/NavBar'
 import { getHotels } from '../../redux/actions';
 import Cards from '../../components/Cards/Cards'
-import Pagination from './../../components/Pagination/Pagination';
+import Pagination from '../../components/Pagination/Pagination';
 
 
 
-
-export default function Destinations() {
+export default function Paquetes() {
 
   const dispatch = useDispatch();
 
@@ -49,14 +48,14 @@ export default function Destinations() {
 
   
 
-  console.log(hotels);
   return (
     <div>
       <NavBar/>
       <div className='mx-24 my-4'>
-      <div className="flex justify-start mx-4 my-2 ">
-      <span className='text-2xl text-start'>Destinations</span>
-      </div>
+        <div className='w-auto h-127 my-4 '>
+        <div className=' bg-rock-lake w-full h-full bg-no-repeat bg-cover bg-center rounded-2 text-white flex'><p className='my-auto mx-8 text-6xl w-1/4 font-josefin'>Disfruta los mejores destinos</p></div>
+        </div>
+      
 
       <Pagination 
       resultsPorPagina={resultsPorPagina} 
