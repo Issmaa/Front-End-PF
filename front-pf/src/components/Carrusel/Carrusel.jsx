@@ -5,6 +5,7 @@ import Card2 from "../Card2/Card2";
 
 function Carrusel() {
   return (
+  <div className="container-all-carousel">
     <Carousel>
       <Carousel.Item>
         <Cards />
@@ -16,7 +17,7 @@ function Carrusel() {
         <Cards />
       </Carousel.Item>
     </Carousel>
-  );
-}
+    </div>
+
 
 export default Carrusel;

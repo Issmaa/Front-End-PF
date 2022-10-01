@@ -7,6 +7,8 @@ import AboutUs from './pages/AboutUs/AboutUs.jsx';
 import Excursiones from "./pages/Excursiones/Excursiones";
 import "bootstrap/dist/css/bootstrap.min.css"
 import Paquetes from './pages/Paquetes/Paquetes';
+import PageUser from "./pages/PageUser/PageUser";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />}/>
         <Route path="/excursiones" element={<Excursiones/>}/>
         {/* <Route path="/detail:id" element={<Detail/>}/> */}
+        <Route path="/user" element={<PageUser />} />
       </Routes>
     </div>
   );

@@ -1,6 +1,8 @@
 .container-iconos {
   position: fixed;
-  top: 0%;
+  top: 50%;
+  transform: translate(0, -51%);
+  padding-bottom: 50px;
 }
 .ul-iconos {
   display: flex;

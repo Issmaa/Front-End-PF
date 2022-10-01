@@ -5,7 +5,6 @@ import validate from "./validator";
 import LoginGoogle from "../loginGoogle/loginGoogle";
 
 export default function Login() {
-  const [loader, setLoader] = useState(false);
   const [input, setInput] = useState({
     username: "",
     email: "",
@@ -26,8 +25,8 @@ export default function Login() {
     date_of_birth: false,
     first_name: false,
     last_name: false,
-    zip_code: false,
-    address: false,
+    city: false,
+    phone_number: false
   });
 
   const [error, setError] = useState({});
@@ -40,8 +39,6 @@ export default function Login() {
       });
     }
   };
-
-  console.log(error);
 
   const handleInputChange = (e) => {
     setInput({
@@ -59,10 +56,20 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!Object.keys(error).length || error.username) {
-      setLoader(true)
+    if (!Object.keys(error).length && input.username !== "") {
       // dispatch();
       console.log("register");
+    } else {
+      setClick({
+        username: true,
+        email: true,
+        password: true,
+        date_of_birth: true,
+        first_name: true,
+        last_name: true,
+        city: true,
+        phone_number: true
+      })
     }
   };
 
@@ -235,7 +242,6 @@ export default function Login() {
 
                 <div className={s.inputField}>
                 <p id={s.dateOfBirth}>Optional</p>
-
                   <input
                     type="text"
                     name="address"
@@ -254,11 +260,7 @@ export default function Login() {
                 {/* Button */}
 
                 <div className={s.loginButton}>
-                  <input
-                    type="button"
-                    value="Create Account"
-                    onClick={handleSubmit}
-                  />
+                <button onClick={handleSubmit}>Create Account</button>
                 </div>
                 <div className={s.googleBtn}>
                   <p id={s.googleOr}>Sign in With Google</p>

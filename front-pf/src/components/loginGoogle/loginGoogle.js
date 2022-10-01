@@ -1,15 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import jwtDecode from "jwt-decode";
-import s from "./loginGoogle.module.css"
-
+import s from "./loginGoogle.module.css";
+import { getCurrentUser } from "../../redux/actions";
+import { useDispatch } from "react-redux";
 export default function LoginGoogle() {
-  const [user, setUser] = useState({});
-
+  const dispatch = useDispatch();
   const handleCallbackResponse = (response) => {
     let userObj = jwtDecode(response.credential);
-    console.log(userObj);
-    setUser(userObj);
+    console.log(userObj)
+    dispatch(getCurrentUser(userObj))
   };
 
   useEffect(() => {

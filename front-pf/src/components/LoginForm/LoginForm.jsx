@@ -3,12 +3,9 @@ import { useState } from "react";
 import s from "./Login.module.css";
 import validate from "./validator";
 import LoginGoogle from "../loginGoogle/loginGoogle";
-import Loader from "../Loader/Loader";
-
 
 export default function Login() {
   const [passEye, setPassEye] = useState(false);
-  const [loader, setLoader] = useState(false);
 
   const toggleEye = () => {
     setPassEye(!passEye);
@@ -39,15 +36,22 @@ export default function Login() {
     }
   };
 
+  console.log(input)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      (!error.password && !error.email && !error.email) ||
-      (!error.password && !error.username && !error.email)
+      (!error.password && !error.email && !error.email && input.username !== "") ||
+      (!error.password && !error.username && !error.email && input.username !== "") 
     ) {
-      setLoader(true);
       // dispatch();
       console.log("login");
+    } else {
+      setClick({
+        username: true,
+        email: true,
+        password: true,
+      })
     }
   };
 
@@ -141,13 +145,11 @@ export default function Login() {
                 </div>
 
                 <div className={s.loginButton}>
-                  <button onClick={handleSubmit}>
-                    {loader ? <Loader /> : "Login Now"}
-                  </button>
+                  <button onClick={handleSubmit}>Login Now</button>
                 </div>
               </form>
               <div className={s.googleBtn}>
-              <p id={s.googleOr}>Sign in With Google</p>
+                <p id={s.googleOr}>Sign in With Google</p>
                 <LoginGoogle />
               </div>
               <div className={s.loginSignup}>
