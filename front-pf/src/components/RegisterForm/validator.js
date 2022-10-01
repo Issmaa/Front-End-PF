@@ -1,7 +1,6 @@
 export function isValidDate(str) {
   let year = str.slice(0, 4);
-  if (Number(year) < 1950 || Number(year) > 2022 || str.length > 10) {
-    console.log(Number(year));
+  if (Number(year) < 1950 || Number(year) > 2023 || str.length > 10) {
     return true;
   } else {
     return false;

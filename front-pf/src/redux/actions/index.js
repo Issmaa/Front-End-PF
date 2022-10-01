@@ -1,4 +1,4 @@
-import { CREATE_USER, GET_ALL_HOTEL } from "./actionsTypes";
+import { CREATE_USER, GET_ALL_HOTEL, GET_CURRENT_USER } from "./actionsTypes";
 const axios = require("axios");
 
 export function getHotels() {
@@ -9,7 +9,11 @@ export function getHotels() {
   };
 }
 
-export const createUser = (payload) => async (dispatch) => {
-  const newUser = axios.post("http://localhost:5000/signup", payload);
-  dispatch({ type: CREATE_USER, payload: newUser });
+// export const createUser = (payload) => async (dispatch) => {
+//   const newUser = axios.post("http://localhost:5000/signup", payload);
+//   dispatch({ type: CREATE_USER, payload: newUser });
+// };
+
+export const getCurrentUser = (obj) => (dispatch) => {
+  dispatch({ type: GET_CURRENT_USER, payload: obj });
 };
