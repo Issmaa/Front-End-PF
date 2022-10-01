@@ -1,10 +1,8 @@
 .container {
   width: auto;
-  height: 800px;
+  height: 91%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* 
-  background-image: url("../../../public/images/bg_home4.jpg"); */
-  /*  background-size: cover; */
+  justify-content: center;
 }
