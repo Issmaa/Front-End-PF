@@ -1,0 +1,18 @@
+.containerAll {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .containerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    justify-content: space-between;
+    background-color: #5bc0be;
+    height: 350px;
+    width: 250px;
+    border-radius: 20px;
+  }
+  

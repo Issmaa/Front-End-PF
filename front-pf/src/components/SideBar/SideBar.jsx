@@ -24,7 +24,7 @@ export default function SideBar() {
         <li className="li-iconos">
           <div>
             <Link
-              to="/destinations"
+              to="/paquetes"
               className=" hover:text-3-color transition ease-in duration-200 text-1-color"
             >
               <LocalAirportIcon fontSize="large" />

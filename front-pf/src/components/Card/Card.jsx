@@ -1,7 +1,7 @@
 import "./CardCss.css";
 import Modal from "../Modal/Modal";
 
-function Cards({ name, cost, lore }) {
+function Card({ name, cost, lore }) {
   return (
     <div className="container-all">
       <div className="container-card">
@@ -13,7 +13,7 @@ function Cards({ name, cost, lore }) {
           <Modal />
         </div>
       </div>
-      <div className="container-card">
+      {/* <div className="container-card">
         <img variant="top" src="holder.js/100px160" />
         <h1>Cataras {name}</h1>
         <p>Lorem ipsum dolor sit amet.{lore} </p>
@@ -30,9 +30,9 @@ function Cards({ name, cost, lore }) {
           <h2 className="h2cost">$ 455555{cost}</h2>
           <Modal />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
 
-export default Cards;
+export default Card;
