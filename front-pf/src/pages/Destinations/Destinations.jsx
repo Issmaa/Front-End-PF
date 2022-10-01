@@ -1,9 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import NavBar from '../../components/NavBar/NavBar'
-import SideBar from "../../components/SideBar/SideBar.jsx";
-import SearchBar from './../../components/SearchBar/SearchBar';
-import CardDestinations from '../../components/CardDestinations/CardDestinations';
 import { getHotels } from '../../redux/actions';
 import Cards from '../../components/Cards/Cards'
 import Pagination from './../../components/Pagination/Pagination';
@@ -37,7 +34,7 @@ export default function Destinations() {
  }
 
  const nextPage = () => {
-    if( data.length > currentPage + 1){
+    if( hotels.length > currentPage + 1){
       return setCurrentPage(currentPage + 1);
     } else {
       return setCurrentPage(currentPage);
@@ -56,7 +53,6 @@ export default function Destinations() {
   return (
     <div>
       <NavBar/>
-      <SideBar/>
       <div className='mx-24 my-4'>
       <div className="flex justify-start mx-4 my-2 ">
       <span className='text-2xl text-start'>Destinations</span>
@@ -64,7 +60,7 @@ export default function Destinations() {
 
       <Pagination 
       resultsPorPagina={resultsPorPagina} 
-      totalResults={data.length} 
+      totalResults={hotels.length} 
       pagina={pagina}
       nextPage={nextPage}
       prevPage={prevPage}
