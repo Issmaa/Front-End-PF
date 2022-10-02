@@ -9,7 +9,7 @@ export default function Forms() {
       <div className="container-forms">
         <form className="forms">
           <div className="h1form">
-            <h1>Datos personales</h1>
+            <h1>Datos personaless</h1>
           </div>
           <div className="container-all-input">
             <div className="container-input-row">
