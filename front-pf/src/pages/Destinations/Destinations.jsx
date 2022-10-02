@@ -4,7 +4,8 @@ import NavBar from '../../components/NavBar/NavBar'
 import { getHotels } from '../../redux/actions';
 import Cards from '../../components/Cards/Cards'
 import Pagination from '../../components/Pagination/Pagination';
-
+import data from '../../data.json';
+import Footer from '../../components/Footer/Footer';
 
 
 export default function Paquetes() {
@@ -23,7 +24,7 @@ export default function Paquetes() {
    const indiceUltimo = currentPage * resultsPorPagina;
    const indicePrimero = indiceUltimo - resultsPorPagina;
    let infoHotels = hotels.slice(indicePrimero, indiceUltimo);
-   
+   let myData = data.slice(indicePrimero,indiceUltimo)
    
    
    
@@ -33,17 +34,20 @@ export default function Paquetes() {
  }
 
  const nextPage = () => {
-    if( hotels.length > currentPage + 1){
-      return setCurrentPage(currentPage + 1);
-    } else {
-      return setCurrentPage(currentPage);
-    }
+  console.log(data.length)
+  console.log(currentPage)
+  if(currentPage + 1 <= Math.ceil(data.length / resultsPorPagina)){
+    return setCurrentPage(currentPage + 1);
+  } else {
+    return setCurrentPage(currentPage);
+  }
   }
  const prevPage = () => {
   if(currentPage > 1){
-     setCurrentPage(currentPage - 1);
+     return setCurrentPage(currentPage - 1);
   }
 }
+
   
 
   
@@ -52,11 +56,20 @@ export default function Paquetes() {
     <div>
       <NavBar/>
       <div className='mx-24 my-4'>
-        <div className='w-auto h-127 my-4 '>
+        <div className='w-auto h-127 my-8'>
         <div className=' bg-rock-lake w-full h-full bg-no-repeat bg-cover bg-center rounded-2 text-white flex'><p className='my-auto mx-8 text-6xl w-1/4 font-josefin'>Disfruta los mejores destinos</p></div>
         </div>
-      
+        <div className='text-start m-4'>
+          <h2>Elige tu camino</h2>
+          <p>Encuentra el mejor paquete que se adapte a tu proxima aventura. No esperes más y planea tus proximas vacaciones.</p>
+        </div>
 
+  {/* <Cards hotels={infoHotels}/> */}
+  <div>
+    <div className='text-start m-8 my-8' ><h3>Principales Destinos Latam</h3></div>
+    <Cards hotels={myData}/>
+  </div>
+  <div className='m-4'>
       <Pagination 
       resultsPorPagina={resultsPorPagina} 
       totalResults={hotels.length} 
@@ -64,21 +77,9 @@ export default function Paquetes() {
       nextPage={nextPage}
       prevPage={prevPage}
       />
-
-      <div className='flex justify-end'>
-        <select  className='mx-2 bg-white text-1-color rounded-lg border-2 border-1-color'>
-          <option value={''}>Filtro 1</option>
-          <option value={'DataBase'}>A-Z</option>
-          <option value={'Api'}>Z-A</option>
-        </select>
-        <select  className='mx-2 bg-white text-1-color rounded-lg border-2 border-1-color'>
-          <option value={''}>Filtro 2</option>
-          <option value={'DataBase'}>Low price</option>
-          <option value={'Api'}>High Price</option>
-        </select>
       </div>
-  <Cards hotels={infoHotels}/>
     </div>
+    <Footer/>
     </div>
   )
 }

@@ -4,14 +4,11 @@ import { Link } from 'react-router-dom';
 export default function CardDestinations({id,name, country,image}) {
   return (
 
-    <div className='w-[22rem] h-80 bg-slate-400 m-2 flex justify-center rounded-lg overflow-hidden'>
-      <Link key={id} to={`/detail/${id}`} className='no-underline'>
+    <div className='w-[22rem] h-60 bg-zinc-200 m-2 flex justify-center rounded-lg overflow-hidden backdrop-opacity-60'>
+      <Link key={id} to={`/detail/${id}`} className='no-underline text-black'>
         <div className=''>
-            <img src={image} alt={name} className='w-3/4'/>
-            <h3 className='w-40 text-xl text-center'>{name}</h3>
-          <div className=''> 
-            <h2 className='text-xl'>{country}</h2> 
-          </div>
+            <h3 className='w-auto text-xl text-start mx-2 m-1 font-josefin'>{name}, {country.slice(0,3)}</h3>
+            <img src={image} alt={name} className='w-96 h-60'/>
         </div>
       </Link>
     </div>
