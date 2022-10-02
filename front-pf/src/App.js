@@ -8,7 +8,7 @@ import Excursiones from "./pages/Excursiones/Excursiones";
 import "bootstrap/dist/css/bootstrap.min.css"
 import Destinations from './pages/Destinations/Destinations';
 import PageUser from "./pages/PageUser/PageUser";
-
+import InfoCard from "./pages/InfoCard/InfoCard";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/destinations" element={<Destinations/>} />
         <Route path="/aboutus" element={<AboutUs />}/>
         <Route path="/excursiones" element={<Excursiones/>}/>
-        {/* <Route path="/detail:id" element={<Detail/>}/> */}
+        <Route path="/detail/:id" element={<InfoCard/>}/>
         <Route path="/user" element={<PageUser />} />
       </Routes>
     </div>
