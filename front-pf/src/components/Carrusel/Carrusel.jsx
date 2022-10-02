@@ -19,5 +19,6 @@ function Carrusel() {
     </Carousel>
     </div>
 
-
+  )
+}
 export default Carrusel;

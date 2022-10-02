@@ -15,8 +15,6 @@ const initialState = {
 export const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ALL_HOTEL:
-      console.log(action.payload);
-    //   console.log(action.payload);
       return {
         ...state,
         hotels: action.payload,
