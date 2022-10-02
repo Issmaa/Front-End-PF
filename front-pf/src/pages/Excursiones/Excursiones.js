@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import { useEffect } from "react";
 import { getExcursiones } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import SideBar from "../../components/SideBar/SideBar";
 
 export default function Excursiones() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ export default function Excursiones() {
   return (
     <div>
       <NavBar />
+      <SideBar />
       <BodyExcursiones />
       <CardExcursion excursionesInfo={excursiones} />
       <Footer />
