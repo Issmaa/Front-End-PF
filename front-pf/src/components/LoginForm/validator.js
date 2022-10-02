@@ -32,10 +32,10 @@ export default function validate(input) {
     }
   }
 
-  if (!input.password) {
-    error.password = "Password is required";
+  if (!input.pass) {
+    error.pass = "Password is required";
   } else if (hasSpecialChars(input.password)) {
-    error.password = "Password may not contain special characters";
+    error.pass = "Password may not contain special characters";
   }
   return error;
 }

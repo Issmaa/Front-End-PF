@@ -3,8 +3,6 @@ import s from "./CardInformation.module.css";
 import { Link } from "react-router-dom";
 
 export default function CardInformation({ img, name, country }) {
-  console.log(country)
-
   return (
     <div className={s.mainContainer}>
       <div className={s.container}>
@@ -14,7 +12,7 @@ export default function CardInformation({ img, name, country }) {
         </div>
         <div className={s.infoContainer}>
           <div className={s.loreContainer}>
-          <h1>{name}</h1>
+            <h1>{name}</h1>
             <div className={s.lore}>
               <p>
                 loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdalorem
@@ -26,8 +24,7 @@ export default function CardInformation({ img, name, country }) {
                 <p>● Correr</p>
                 <p>● Montañismo</p>
                 <p>● Rafting</p>
-                <Link>Ver Todos las Actividades</Link>
-
+                <Link to="/excursiones">Ver Todos las Actividades</Link>
               </div>
               <div id={s.hot} className={s.actContainer}>
                 <h2>Hoteles</h2>

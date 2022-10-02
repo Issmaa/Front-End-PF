@@ -5,6 +5,8 @@ import {
   GET_ALL_EXCURSION,
   GET_CURRENT_USER,
   GET_PACK_BY_ID,
+  USER_LOGIN,
+  USER_LOGOUT,
 } from "../actions/actionsTypes";
 
 const initialState = {
@@ -12,6 +14,7 @@ const initialState = {
   packs: [],
   excursiones: [],
   currentUser: {},
+  loginAccess: {},
   packById: [],
 };
 
@@ -39,6 +42,16 @@ export const rootReducer = (state = initialState, action) => {
         ...state,
         packById: action.payload,
       };
+    case USER_LOGIN:
+      return {
+        ...state,
+        loginAccess: action.payload,
+      };
+    case USER_LOGOUT:
+      return {
+        ...state,
+        loginAccess: {}
+      }
     default:
       return {
         ...state,

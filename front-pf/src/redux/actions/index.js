@@ -3,9 +3,11 @@ import {
   GET_ALL_PACKS,
   GET_ALL_HOTEL,
   GET_PACK_BY_ID,
+  USER_LOGIN,
+  USER_LOGOUT,
 } from "./actionsTypes";
 import { CREATE_USER, GET_CURRENT_USER } from "./actionsTypes";
-import data from "../../data.json"
+import data from "../../data.json";
 const axios = require("axios");
 
 export function getHotels() {
@@ -24,19 +26,21 @@ export function getExcursiones() {
   };
 }
 
-// export const createUser = (payload) => async (dispatch) => {
-//   const newUser = axios.post("http://localhost:5000/signup", payload);
-//   dispatch({ type: CREATE_USER, payload: newUser });
-// };
-
 export const getCurrentUser = (obj) => (dispatch) => {
   return dispatch({ type: GET_CURRENT_USER, payload: obj });
 };
 
 export const getPackById = (packId) => async (dispatch) => {
-  const pack = data.filter(pack => pack.id === packId)
-  console.log(pack)
+  const pack = data.filter((pack) => pack.id === packId);
+  console.log(pack);
   return dispatch({ type: GET_PACK_BY_ID, payload: pack });
 };
 
+export const userLogin = (obj) => async (dispatch) => {
+  const login = await axios.post("http://localhost:5001/create/signup", obj);
+  dispatch({ type: USER_LOGIN, payload: login });
+};
 
+export const userLogout = () => (dispatch) => {
+  dispatch({ type: USER_LOGOUT });
+};

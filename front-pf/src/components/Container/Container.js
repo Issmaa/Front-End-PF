@@ -9,7 +9,7 @@ export default function Container() {
     <div className={s.container}>
       <div className={s.mainContainer}>
         <div className={s.btn}>
-          <Link to="/paquetes">
+          <Link to="/destinations">
             <button>See All Destinations</button>
           </Link>
         </div>
