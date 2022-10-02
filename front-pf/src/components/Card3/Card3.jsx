@@ -1,11 +1,11 @@
-import "./CardCss.css";
+import "../Card/CardCss.css";
 import Modal from "../Modal/Modal";
 
 function Card({ name, cost, lore }) {
   return (
     <div className="container-all">
-      <div className="container-card-misiones">
-        <h1>Misiones {name}</h1>
+      <div className="container-card-lagos">
+        <h1>San Martin {name}</h1>
         <p>Lorem ipsum dolor sitng elit.{lore} </p>
         <div>
           <h2 className="h2cost">$ 1212121 {cost}</h2>
