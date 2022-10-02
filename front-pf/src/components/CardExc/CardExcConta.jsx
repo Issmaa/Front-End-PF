@@ -18,7 +18,7 @@ export default function CardExcContainer({
           </div>
           <div className="DesciptionExc">
             <h5>{info}</h5>
-            <p>Fecha de inicio: {fechaI}</p>
+            <p>Fecha de inicioo: {fechaI}</p>
             <p>Fecha de finalizacion: {fechaF}</p>
             <p>Dificultad: {dificultad}</p>
           </div>
