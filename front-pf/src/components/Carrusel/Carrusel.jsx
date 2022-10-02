@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import Cards from "../Card/Card";
 import Card2 from "../Card2/Card2";
+import "./Carrusel.css";
 
 function Carrusel() {
   return (
