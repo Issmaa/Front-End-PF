@@ -3,26 +3,34 @@ import { useState } from "react";
 import s from "./Login.module.css";
 import validate from "./validator";
 import LoginGoogle from "../loginGoogle/loginGoogle";
+import { userLogin, userLogout } from "../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Loader from "../Loader/Loader";
 
 export default function Login() {
   const [passEye, setPassEye] = useState(false);
+  const dispatch = useDispatch();
+  const [loginError, setLoginError] = useState(false);
+  const navigate = useNavigate();
+  const loginAccess = useSelector((state) => state.loginAccess);
+  const [loading, setLoading] = useState(false);
 
   const toggleEye = () => {
     setPassEye(!passEye);
   };
 
-  console.log(passEye);
-
   const [input, setInput] = useState({
     username: "",
     email: "",
-    password: "",
+    pass: "",
   });
 
   const [click, setClick] = useState({
     username: false,
     email: false,
-    password: false,
+    pass: false,
   });
 
   const [error, setError] = useState({});
@@ -36,24 +44,29 @@ export default function Login() {
     }
   };
 
-  console.log(input)
+  console.log(input);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      (!error.password && !error.email && !error.email && input.username !== "") ||
-      (!error.password && !error.username && !error.email && input.username !== "") 
-    ) {
-      // dispatch();
-      console.log("login");
+    if (!Object.keys(error).length && input.pass !== "") {
+      dispatch(userLogin(input));
+      if (!loginAccess.data) {
+        setLoginError(true);
+      }
     } else {
       setClick({
         username: true,
         email: true,
-        password: true,
-      })
+        pass: true,
+      });
     }
   };
+  useEffect(() => {
+    if (loginAccess.data) {
+      navigate("/");
+      dispatch(userLogout());
+    }
+  }, [loginAccess]);
 
   console.log(error);
 
@@ -120,15 +133,15 @@ export default function Login() {
                   <input
                     type={!passEye && "password"}
                     placeholder="Password"
-                    name="password"
+                    name="pass"
                     onChange={handleInputChange}
                     onClick={handleClick}
-                    value={input.password}
+                    value={input.pass}
                     required
                   />
                   <i class="uil uil-lock"></i>
-                  {click.password && error.password && (
-                    <p className={s.error}>{error.password}</p>
+                  {click.pass && error.pass && (
+                    <p className={s.error}>{error.pass}</p>
                   )}
                 </div>
                 <div className={s.checkboxText}>
@@ -145,8 +158,13 @@ export default function Login() {
                 </div>
 
                 <div className={s.loginButton}>
-                  <button onClick={handleSubmit}>Login Now</button>
+                  <button onClick={handleSubmit}>
+                    {loading ? <Loader /> : "Login Now"}
+                  </button>
                 </div>
+                {loginError && (
+                  <p className={s.loginError}>Email o Contraseña incorrectos</p>
+                )}
               </form>
               <div className={s.googleBtn}>
                 <p id={s.googleOr}>Sign in With Google</p>

@@ -4,11 +4,17 @@ import jwtDecode from "jwt-decode";
 import s from "./loginGoogle.module.css";
 import { getCurrentUser } from "../../redux/actions";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 export default function LoginGoogle() {
+  const navigate = useNavigate()
   const dispatch = useDispatch();
+
+  
   const handleCallbackResponse = (response) => {
     let userObj = jwtDecode(response.credential);
     console.log(userObj)
+    navigate("/")
     dispatch(getCurrentUser(userObj))
   };
 
