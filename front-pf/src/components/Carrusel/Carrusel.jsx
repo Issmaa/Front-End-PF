@@ -3,6 +3,8 @@ import { Carousel } from "react-bootstrap";
 import Cards from "../Card/Card";
 import Card2 from "../Card2/Card2";
 import Card3 from "../Card3/Card3";
+import "./Carrusel.css";
+
 
 function Carrusel() {
   return (
