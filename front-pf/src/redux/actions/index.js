@@ -1,11 +1,11 @@
-
 import {
   GET_ALL_EXCURSION,
   GET_ALL_PACKS,
   GET_ALL_HOTEL,
+  GET_PACK_BY_ID,
 } from "./actionsTypes";
 import { CREATE_USER, GET_CURRENT_USER } from "./actionsTypes";
-
+import data from "../../data.json"
 const axios = require("axios");
 
 export function getHotels() {
@@ -15,7 +15,6 @@ export function getHotels() {
       .catch((error) => console.log(error));
   };
 }
-
 
 export function getExcursiones() {
   return (dispatch) => {
@@ -31,6 +30,13 @@ export function getExcursiones() {
 // };
 
 export const getCurrentUser = (obj) => (dispatch) => {
-  dispatch({ type: GET_CURRENT_USER, payload: obj });
+  return dispatch({ type: GET_CURRENT_USER, payload: obj });
 };
+
+export const getPackById = (packId) => async (dispatch) => {
+  const pack = data.filter(pack => pack.id === packId)
+  console.log(pack)
+  return dispatch({ type: GET_PACK_BY_ID, payload: pack });
+};
+
 

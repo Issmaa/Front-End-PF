@@ -12,15 +12,13 @@ function Pagination({ resultsPorPagina, totalResults, pagina, nextPage, prevPage
     return (
     <nav className='mx-4'>
         <ul className={s.paginationContainer}>
-            <li><button className={s.btnPagination}>&laquo;</button></li>
             <li><button onClick={prevPage} className={s.btnPagination}>Prev</button></li>
-        {numeroDePaginas?.slice(0,5).map(num => (
+        {numeroDePaginas?.slice(0,3).map(num => (
             <li key={num} className='page-item'>
                 <button onClick={() => pagina(num)} className={s.btnPagination} value={num}>{num}</button>
             </li>
         ))}
         <li><button onClick={nextPage} className={s.btnPagination}>Next</button></li>
-        <li><button className={s.btnPagination}>&raquo;</button></li>
         </ul>
     </nav>
   )

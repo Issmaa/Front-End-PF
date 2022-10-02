@@ -8,10 +8,10 @@ export default function Cards({hotels}) {
         <CardDestinations key={e.id} 
         id={e.id} 
         name={e.name} 
-        number={e.phoneNumber} 
-        address={e.address} 
-        country={e.cityCountry} 
-        description={e.description} 
+        // number={e.phoneNumber} 
+        // address={e.address} 
+        country={e.country} 
+        // description={e.description} 
         image={e.image ? e.image : 'not found'}/>
       )}
     </div>
