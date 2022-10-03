@@ -2,17 +2,17 @@ import React from "react";
 import s from "./CardInformation.module.css";
 import { Link } from "react-router-dom";
 
-export default function CardInformation({ img, name, lore, cost }) {
-
+export default function CardInformation({ img, name, country }) {
   return (
     <div className={s.mainContainer}>
       <div className={s.container}>
         <div className={s.imgContainer}>
-          <img src="https://bariloche.org/wp-content/uploads/2020/01/bariloche-barilocheorg-verano2021-fotofranciscoraggio-fotobarilocheorg-patagonia-argentina-lagonahuelhuapi-cartelbariloche.jpg" />
+          <h1 id={s.country}>{country}</h1>
+          <img src={img} />
         </div>
         <div className={s.infoContainer}>
           <div className={s.loreContainer}>
-          <h1>Bariloche</h1>
+            <h1>{name}</h1>
             <div className={s.lore}>
               <p>
                 loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdalorem
@@ -20,19 +20,70 @@ export default function CardInformation({ img, name, lore, cost }) {
             </div>
             <div className={s.elseContainer}>
               <div id={s.act} className={s.actContainer}>
-                <h2>Actividades</h2>
-                <p>● Correr</p>
-                <p>● Montañismo</p>
-                <p>● Rafting</p>
-                <Link>Ver Todos las Actividades</Link>
-
+                <h2>● Actividades</h2>
+                <div className={s.actsContainer}>
+                  <div className={s.acts}>
+                    <p>Correr</p>
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.acts}>
+                    <p>Montañismo</p>
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.acts}>
+                    <p>Rafting</p>
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <Link to="/excursiones">Ver Todos las Actividades</Link>
               </div>
               <div id={s.hot} className={s.actContainer}>
-                <h2>Hoteles</h2>
-                <p>★ Hotel San Bernardo</p>
-                <p>★ Hotel Hilton</p>
-                <p>★ Hotel Don Patricio</p>
-                <Link to='/hotels'>Ver Todos los Hoteles</Link>
+                <h2>★ Hoteles</h2>
+                <div className={s.actsContainer}>
+                  <div className={s.acts}>
+                    <p>Hotel San Bernardo</p>
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.acts}>
+                    <p>Hotel Hilton</p>
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.acts}>
+                    <p>Hotel Don Patricio</p>
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <Link>Ver Todos los Hoteles</Link>
               </div>
             </div>
           </div>

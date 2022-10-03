@@ -12,9 +12,9 @@ export default function SideBar() {
     <div className="container-iconos">
       <ul className="ul-iconos">
         <li className="li-iconos">
-          <div>
+          <div className="iconoDeLi">
             <Link
-              to="#"
+              to="/user"
               className="hover:text-blue-700  transition ease-in duration-200 text-1-color"
             >
               <AccountCircleIcon fontSize="large" />
@@ -22,9 +22,9 @@ export default function SideBar() {
           </div>
         </li>
         <li className="li-iconos">
-          <div>
+          <div className="iconoDeLi">
             <Link
-              to="/destinations"
+              to="destinations"
               className=" hover:text-3-color transition ease-in duration-200 text-1-color"
             >
               <LocalAirportIcon fontSize="large" />
@@ -32,7 +32,7 @@ export default function SideBar() {
           </div>
         </li>
         <li className="li-iconos">
-          <div>
+          <div className="iconoDeLi">
             <Link
               to="excursiones"
               className=" hover:text-orange-500 transition ease-in duration-200 text-1-color"
@@ -42,7 +42,7 @@ export default function SideBar() {
           </div>
         </li>
         <li className="li-iconos">
-          <div>
+          <div className="iconoDeLi">
             <Link
               to="#"
               className="hover:text-zinc-400 transition ease-in duration-200 text-1-color"

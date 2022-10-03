@@ -14,6 +14,11 @@
   justify-content: center;
 }
 
+.loginError{
+  color: red;
+}
+
+
 #googleOr {
   color: rgb(64, 192, 190);
   font-size: 18px;
