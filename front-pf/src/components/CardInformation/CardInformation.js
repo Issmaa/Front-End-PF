@@ -32,7 +32,7 @@ export default function CardInformation({ img, name, lore, cost }) {
                 <p>★ Hotel San Bernardo</p>
                 <p>★ Hotel Hilton</p>
                 <p>★ Hotel Don Patricio</p>
-                <Link>Ver Todos los Hoteles</Link>
+                <Link to='/hotels'>Ver Todos los Hoteles</Link>
               </div>
             </div>
           </div>
