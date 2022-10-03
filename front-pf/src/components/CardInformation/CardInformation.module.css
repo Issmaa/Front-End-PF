@@ -6,7 +6,7 @@
 .container {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.3);
-  height: 120vh;
+  height: 220vh;
   position: relative;
 }
 
@@ -48,6 +48,10 @@
   font-size: 20px;
 }
 
+.loreContainer h1:hover{
+  background-color: #0b132bff;
+}
+
 #country {
   position: absolute;
   background-color: #1c2541ff;
@@ -60,6 +64,10 @@
   top: 2vh;
   font-size: 28px;
   color: rgba(255, 255, 255, 0.9);
+}
+
+#country:hover{
+  background-color: #0b132bff;
 }
 
 .loreContainer {
@@ -83,30 +91,91 @@
 }
 
 .elseContainer {
-  height: 25vh;
   margin-top: 50px;
-  width: 70%;
-  display: flex;
+  width: 80%;
 }
 
 .actContainer h2 {
-  font-size: 4vh;
-}
-
-.actContainer {
-  height: 28vh;
-  width: 50%;
+  font-size: 3vh;
   text-align: center;
+  margin-left: 20px;
+}
+.actContainer {
+  height: 64vh;
+  width: 100%;
+  text-align: start;
   font-size: 20px;
   background-color: #0b132bff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   padding: 10px;
   transition: 0.2s;
+  margin-top: 0vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
+.actsContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.acts {
+  height: 40vh;
+  width: 25%;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: #1c2541ff;
+  border-radius: 20px;
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.acts:hover{
+  background-color: rgb(44, 58, 100);
+  transition: .3s;
+  height: 41vh;
+  width: 26%;
+  margin: 3px;
+}
+
+.acts p{
+  text-align: center;
+  margin-left: 13px;
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+.acts img{
+  max-height: 240px;
+}
+
+#actLorem{
+  word-wrap: break-word;
+  max-height: 90px;
+  max-width: 370px;
+  padding: 10px;
+}
+
+#actLorem p{
+  font-size: 16px;
+}
+
 
 .actContainer a {
   text-decoration: none;
   color: #5bc0beff;
-  font-size: 20px;
+  font-size: 19px;
   border-radius: 20px;
   background-color: #0b132bff;
   padding: 10px;
@@ -114,13 +183,12 @@
 }
 
 #act {
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 30px;
 }
 
 #hot {
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 30px;
+  margin-top: 5vh;
 }
 
 .actContainer a:hover {

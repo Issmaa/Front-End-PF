@@ -20,17 +20,69 @@ export default function CardInformation({ img, name, country }) {
             </div>
             <div className={s.elseContainer}>
               <div id={s.act} className={s.actContainer}>
-                <h2>Actividades</h2>
-                <p>● Correr</p>
-                <p>● Montañismo</p>
-                <p>● Rafting</p>
+                <h2>● Actividades</h2>
+                <div className={s.actsContainer}>
+                  <div className={s.acts}>
+                    <p>Correr</p>
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.acts}>
+                    <p>Montañismo</p>
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.acts}>
+                    <p>Rafting</p>
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                </div>
                 <Link to="/excursiones">Ver Todos las Actividades</Link>
               </div>
               <div id={s.hot} className={s.actContainer}>
-                <h2>Hoteles</h2>
-                <p>★ Hotel San Bernardo</p>
-                <p>★ Hotel Hilton</p>
-                <p>★ Hotel Don Patricio</p>
+                <h2>★ Hoteles</h2>
+                <div className={s.actsContainer}>
+                  <div className={s.acts}>
+                    <p>Hotel San Bernardo</p>
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.acts}>
+                    <p>Hotel Hilton</p>
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.acts}>
+                    <p>Hotel Don Patricio</p>
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <div id={s.actLorem}>
+                      <p>
+                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
+                      </p>
+                    </div>
+                  </div>
+                </div>
                 <Link>Ver Todos los Hoteles</Link>
               </div>
             </div>
