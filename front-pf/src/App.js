@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Destinations from './pages/Destinations/Destinations';
 import PageUser from "./pages/PageUser/PageUser";
 import InfoCard from "./pages/InfoCard/InfoCard";
+import CreatePack from "./pages/CreatePack/CreatePack"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/excursiones" element={<Excursiones/>}/>
         <Route path="/detail/:id" element={<InfoCard/>}/>
         <Route path="/user" element={<PageUser />} />
+        <Route path="/createPack" element={<CreatePack />} />
       </Routes>
     </div>
   );
