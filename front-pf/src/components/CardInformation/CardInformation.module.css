@@ -151,7 +151,6 @@
 
 .acts p{
   text-align: center;
-  margin-left: 13px;
   font-size: 20px;
   margin-top: 3px;
 }
@@ -163,7 +162,7 @@
 #actLorem{
   word-wrap: break-word;
   max-height: 90px;
-  max-width: 370px;
+  max-width: 19vw;
   padding: 10px;
 }
 
