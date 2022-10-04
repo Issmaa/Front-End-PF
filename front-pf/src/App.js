@@ -10,6 +10,9 @@ import Destinations from "./pages/Destinations/Destinations";
 import PageUser from "./pages/PageUser/PageUser";
 import InfoCard from "./pages/InfoCard/InfoCard";
 import PageHotel from "./pages/Packs/Hotel";
+import CreatePack from "./pages/CreatePack/CreatePack"
+import Hotels from './pages/Hotels/Hotels.jsx';
+
 function App() {
   return (
     <div className="App">
@@ -22,7 +25,11 @@ function App() {
         <Route path="/excursiones" element={<Excursiones />} />
         <Route path="/detail/:id" element={<InfoCard />} />
         <Route path="/user" element={<PageUser />} />
+
         <Route path="/page-hotel" element={<PageHotel />} />
+        <Route path="/createPack" element={<CreatePack />} />
+        <Route path="/hotels" element={<Hotels/>}/>
+
       </Routes>
     </div>
   );
