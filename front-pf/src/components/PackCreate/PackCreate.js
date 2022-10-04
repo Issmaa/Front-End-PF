@@ -3,6 +3,7 @@ import s from "./PackCreate.module.css";
 import { useState } from "react";
 
 export default function PackCreate() {
+  // Simbolisa la data del backend
   const [actividades] = useState([
     { name: "Montañismo" },
     { name: "Senderismo" },
@@ -15,17 +16,16 @@ export default function PackCreate() {
     { name: "Cena" },
   ]);
 
-  const [checkboxStates] = useState({
-    actividades: {
-      Montañismo: false,
-      Senderismo: false,
-      Rafting: false,
-    },
-    comida: {
-      Desayuno: false,
-      Almuerzo: false,
-      Cena: false,
-    },
+  const [actCheckboxStates, setActCheckboxStates] = useState({
+    Montañismo: false,
+    Senderismo: false,
+    Rafting: false,
+  });
+
+  const [comCheckboxState, setComCheckboxState] = useState({
+    Desayuno: false,
+    Almuerzo: false,
+    Cena: false,
   });
 
   const [input, setInput] = useState({
@@ -40,10 +40,15 @@ export default function PackCreate() {
 
   // Guarda en el input los generos y plataformas
   const handleButtonClick = (e) => {
-    console.log(checkboxStates.actividades.Montañismo)
-    checkboxStates[e.target.name][e.target.value] =
-      !checkboxStates[e.target.name][e.target.value];
-    if (checkboxStates[e.target.name][e.target.value]) {
+    setActCheckboxStates({
+      ...actCheckboxStates,
+      [e.target.value]: !actCheckboxStates[e.target.value],
+    });
+    setComCheckboxState({
+      ...comCheckboxState,
+      [e.target.value]: !actCheckboxStates[e.target.value],
+    });
+    if (!actCheckboxStates[e.target.value]) {
       input[e.target.name].push(e.target.value);
     } else {
       input[e.target.name] = input[e.target.name].filter(
@@ -59,6 +64,8 @@ export default function PackCreate() {
     });
   };
 
+  console.log(input);
+
   return (
     <div className={s.mainContainer}>
       <div className={s.container}>
@@ -69,62 +76,38 @@ export default function PackCreate() {
               <h2>{input.destino ? input.destino : "Destino..."}</h2>
             </div>
             <div className={s.hotel}>
-              <p>Hotel: </p>
+              <h5>Hotel: </h5>
               <p>{input.hotel ? input.hotel : "Hotel..."}</p>
             </div>
             <div className={s.check}>
               <div className={s.acts}>
-                <p>Actividades :</p>
-                <div>
-                  <h2
-                    className={
-                      checkboxStates.actividades.Montañismo ? s.show : s.hide
-                    }
-                  >
-                    test
-                  </h2>
+                <p>Actividades</p>
+                <div className={s.checkTxt}>
+                  <h2>{actCheckboxStates.Montañismo && "● Montañismo"}</h2>
+                  <h2>{actCheckboxStates.Senderismo && "● Senderismo"}</h2>
+                  <h2>{actCheckboxStates.Rafting && "● Rafting"}</h2>
                 </div>
               </div>
               <div className={s.acts}>
-                <p>Comidas Incluidas:</p>
-                <div className={s.actividades}>
-                  <div className={s.actividades}>
-                    <div className={s.checkbox}>
-                      <input type="checkbox" />
-                      <label>Desayuno</label>
-                    </div>
-                    <div className={s.checkbox}>
-                      <input type="checkbox" />
-                      <label>Almuerzo</label>
-                    </div>
-                    <div className={s.checkbox}>
-                      <input type="checkbox" />
-                      <label>Cena</label>
-                    </div>
-                  </div>
+                <p>Comidas Incluidas</p>
+                <div className={s.checkTxt}>
+                  <h2>{comCheckboxState.Desayuno && "● Desayuno"}</h2>
+                  <h2>{comCheckboxState.Almuerzo && "● Almuerzo"}</h2>
+                  <h2>{comCheckboxState.Cena && "● Cena"}</h2>
                 </div>
               </div>
             </div>
             <div className={s.tiempo}>
-              <p>Integrantes :</p>
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-              </select>
+              <h5>Integrantes :</h5>
+              <p>{input.integrantes ? input.integrantes : "Integrantes..."}</p>
             </div>
             <div className={s.tiempo}>
-              <p>Semanas</p>
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
+              <h5>Semanas :</h5>
+              <p>{input.semanas ? input.semanas : "Semanas..."}</p>
             </div>
-            <h3>Precio</h3>
+            <div className={s.precio}>
+              <h3>Precio</h3>
+            </div>
           </div>
         </div>
         <div className={s.formContainer}>
@@ -244,7 +227,6 @@ export default function PackCreate() {
               </select>
             </div>
           </form>
-          <button onClick={() => console.log(input)}>ASHEEE</button>
         </div>
       </div>
     </div>
