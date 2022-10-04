@@ -1,5 +1,4 @@
 import "./CardCss.css";
-import Modal from "../Modal/Modal";
 
 function Card({ name, cost, lore }) {
   return (
@@ -9,7 +8,6 @@ function Card({ name, cost, lore }) {
         <p>Lorem ipsum dolor sitng elit.{lore} </p>
         <div>
           <h2 className="h2cost">$ 1212121 {cost}</h2>
-          <Modal />
         </div>
       </div>
       <div className="container-card-paraguay">
@@ -17,7 +15,6 @@ function Card({ name, cost, lore }) {
         <p>Lorem ipsum dolor sit amet.{lore} </p>
         <div>
           <h2 className="h2cost">$ 50000{cost}</h2>
-          <Modal />
         </div>
       </div>
       <div className="container-card-brasil">
@@ -25,7 +22,6 @@ function Card({ name, cost, lore }) {
         <p>Lorem ipsum dolor adipisicing elit. {lore} </p>
         <div>
           <h2 className="h2cost">$ 455555{cost}</h2>
-          <Modal />
         </div>
       </div>
     </div>
