@@ -6,6 +6,7 @@
   width: auto;
   background-image: url("../../../public/images/bgLoginAndRegister.jpg");
   background-size: 100% 100%;
+  text-align: center;
 }
 
 .formMainContainer {

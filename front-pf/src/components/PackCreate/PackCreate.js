@@ -229,6 +229,9 @@ export default function PackCreate() {
           </form>
         </div>
       </div>
+      <div className={s.checkoutBtn}>
+        <button onClick={() => console.log(input)}>Checkout</button>
+      </div>
     </div>
   );
 }
