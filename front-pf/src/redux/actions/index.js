@@ -8,6 +8,7 @@ import {
 } from "./actionsTypes";
 import { CREATE_USER, GET_CURRENT_USER } from "./actionsTypes";
 import data from "../../data.json";
+import fullData from '../../pages/dataFull.json'
 const axios = require("axios");
 
 export function getHotels() {
@@ -31,7 +32,7 @@ export const getCurrentUser = (obj) => (dispatch) => {
 };
 
 export const getPackById = (packId) => async (dispatch) => {
-  const pack = data.filter((pack) => pack.id === packId);
+  const pack = await data.filter((pack) => pack.id === packId);
   console.log(pack);
   return dispatch({ type: GET_PACK_BY_ID, payload: pack });
 };

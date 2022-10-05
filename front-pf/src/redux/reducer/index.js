@@ -34,7 +34,7 @@ const initialState = {
   ],
   currentUser: {},
   loginAccess: {},
-  packById: [],
+  packById: {},
   boolean: [],
 };
 
@@ -58,6 +58,7 @@ export const rootReducer = (state = initialState, action) => {
         currentUser: action.payload,
       };
     case GET_PACK_BY_ID:
+      console.log(action.payload)
       return {
         ...state,
         packById: action.payload,

@@ -10,6 +10,9 @@ import Destinations from './pages/Destinations/Destinations';
 import PageUser from "./pages/PageUser/PageUser";
 import InfoCard from "./pages/InfoCard/InfoCard";
 import Hotels from './pages/Hotels/Hotels.jsx';
+import HotelDetail from "./pages/HotelDetail/HotelDetail";
+import Legales from "./pages/Legales/Legales";
+
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
         <Route path="/detail/:id" element={<InfoCard/>}/>
         <Route path="/user" element={<PageUser />} />
         <Route path="/hotels" element={<Hotels/>}/>
+        <Route path="/hoteldetail" element={<HotelDetail/>}/>
+        <Route path="/legales" element={<Legales/>}/>
       </Routes>
     </div>
   );

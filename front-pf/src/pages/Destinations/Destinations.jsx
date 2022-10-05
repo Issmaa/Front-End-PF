@@ -7,6 +7,7 @@ import Cards from '../../components/Cards/Cards'
 import Pagination from '../../components/Pagination/Pagination';
 import data from '../../data.json';
 import Footer from '../../components/Footer/Footer';
+import fullData from '../dataFull.json';
 
 
 export default function Paquetes() {
@@ -20,12 +21,12 @@ export default function Paquetes() {
   const hotels = useSelector(state=> state.hotels);
    //PAGINADO
    const [currentPage,setCurrentPage] = useState(1);
-   const [resultsPorPagina] = useState(3);
+   const [resultsPorPagina] = useState(4);
    
    const indiceUltimo = currentPage * resultsPorPagina;
    const indicePrimero = indiceUltimo - resultsPorPagina;
    let infoHotels = hotels.slice(indicePrimero, indiceUltimo);
-   let myData = data.slice(indicePrimero,indiceUltimo)
+   let myData = fullData.slice(indicePrimero,indiceUltimo)
    
    
    
@@ -35,7 +36,7 @@ export default function Paquetes() {
  }
 
  const nextPage = () => {
-  console.log(data.length)
+  console.log(fullData.length)
   console.log(currentPage)
   if(currentPage + 1 <= Math.ceil(data.length / resultsPorPagina)){
     return setCurrentPage(currentPage + 1);
@@ -70,15 +71,15 @@ export default function Paquetes() {
     <div className='text-start m-8 my-8' ><h3>Principales Destinos Latam</h3></div>
     <Cards hotels={myData}/>
   </div>
-  <div className='m-4'>
+  {/* <div className='m-4'>
       <Pagination 
       resultsPorPagina={resultsPorPagina} 
-      totalResults={hotels.length} 
+      totalResults={fullData.length} 
       pagina={pagina}
       nextPage={nextPage}
       prevPage={prevPage}
       />
-      </div>
+      </div> */}
     </div>
     <Footer/>
     </div>

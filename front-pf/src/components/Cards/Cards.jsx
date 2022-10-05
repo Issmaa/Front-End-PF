@@ -7,12 +7,11 @@ export default function Cards({hotels}) {
       {hotels && hotels?.map(e =>
         <CardDestinations key={e.id} 
         id={e.id} 
-        name={e.name} 
-        // number={e.phoneNumber} 
-        // address={e.address} 
         country={e.country} 
-        // description={e.description} 
-        image={e.image ? e.image : 'not found'}/>
+        // number={e.phoneNumber} 
+        // address={e.address}  
+        summary={e.summary} 
+        image={e.images ? e.images[0].name : 'not found'}/>
       )}
     </div>
   )

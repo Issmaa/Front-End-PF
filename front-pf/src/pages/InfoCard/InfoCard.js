@@ -9,13 +9,13 @@ import { getPackById } from "../../redux/actions";
 
 export default function InfoCard() {
   const dispatch = useDispatch();
-  const packById = useSelector((state) => state.packById[0]);
+  const packById = useSelector((state) => state.packById);
   const { id } = useParams();
 
 
   useEffect(() => {
     dispatch(getPackById(id));
-  }, []);
+  }, [dispatch]);
 
 
   return (
