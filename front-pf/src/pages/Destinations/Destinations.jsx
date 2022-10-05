@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import NavBar from "../../components/NavBar/NavBar";
-import { getHotels } from "../../redux/actions";
-import Cards from "../../components/Cards/Cards";
-import Pagination from "../../components/Pagination/Pagination";
-import data from "../../data.json";
-import Footer from "../../components/Footer/Footer";
+import React, { useEffect,useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import NavBar from '../../components/NavBar/NavBar'
+import { getHotels } from '../../redux/actions';
+import Cards from '../../components/Cards/Cards'
+import Pagination from '../../components/Pagination/Pagination';
+import data from '../../data.json';
+import Footer from '../../components/Footer/Footer';
+import fullData from '../dataFull.json';
+
 
 export default function Paquetes() {
   /*ESTO SON PAISES Y NO PAQUETE. YA ESTA ACLARADO PERO NO LO CAMBIO POR SI LAS DUDAS*/
@@ -15,35 +17,37 @@ export default function Paquetes() {
     dispatch(getHotels());
   }, [dispatch]);
 
-  const hotels = useSelector((state) => state.hotels);
-  //PAGINADO
-  const [currentPage, setCurrentPage] = useState(1);
-  const [resultsPorPagina] = useState(3);
+  const hotels = useSelector(state=> state.hotels);
+   //PAGINADO
+   const [currentPage,setCurrentPage] = useState(1);
+   const [resultsPorPagina] = useState(4);
+   
+   const indiceUltimo = currentPage * resultsPorPagina;
+   const indicePrimero = indiceUltimo - resultsPorPagina;
+   let infoHotels = hotels.slice(indicePrimero, indiceUltimo);
+   let myData = fullData.slice(indicePrimero,indiceUltimo)
+   
+   
+   
+   //Cambio de pagina
+ function pagina(pageNumber){
+   return setCurrentPage(pageNumber)
+ }
 
-  const indiceUltimo = currentPage * resultsPorPagina;
-  const indicePrimero = indiceUltimo - resultsPorPagina;
-  let infoHotels = hotels.slice(indicePrimero, indiceUltimo);
-  let myData = data.slice(indicePrimero, indiceUltimo);
-
-  //Cambio de pagina
-  function pagina(pageNumber) {
-    return setCurrentPage(pageNumber);
+ const nextPage = () => {
+  console.log(fullData.length)
+  console.log(currentPage)
+  if(currentPage + 1 <= Math.ceil(data.length / resultsPorPagina)){
+    return setCurrentPage(currentPage + 1);
+  } else {
+    return setCurrentPage(currentPage);
   }
-
-  const nextPage = () => {
-    console.log(data.length);
-    console.log(currentPage);
-    if (currentPage + 1 <= Math.ceil(data.length / resultsPorPagina)) {
-      return setCurrentPage(currentPage + 1);
-    } else {
-      return setCurrentPage(currentPage);
-    }
-  };
-  const prevPage = () => {
-    if (currentPage > 1) {
-      return setCurrentPage(currentPage - 1);
-    }
-  };
+  }
+ const prevPage = () => {
+  if(currentPage > 1){
+     return setCurrentPage(currentPage - 1);
+  }
+}
 
   return (
     <div>
@@ -64,22 +68,21 @@ export default function Paquetes() {
           </p>
         </div>
 
-        {/* <Cards hotels={infoHotels}/> */}
-        <div>
-          <div className="text-start m-8 my-8">
-            <h3>Principales Destinos Latam</h3>
-          </div>
-          <Cards hotels={myData} />
-        </div>
-        <div className="m-4">
-          <Pagination
-            resultsPorPagina={resultsPorPagina}
-            totalResults={hotels.length}
-            pagina={pagina}
-            nextPage={nextPage}
-            prevPage={prevPage}
-          />
-        </div>
+
+  {/* <Cards hotels={infoHotels}/> */}
+  <div>
+    <div className='text-start m-8 my-8' ><h3>Principales Destinos Latam</h3></div>
+    <Cards hotels={myData}/>
+  </div>
+  {/* <div className='m-4'>
+      <Pagination 
+      resultsPorPagina={resultsPorPagina} 
+      totalResults={fullData.length} 
+      pagina={pagina}
+      nextPage={nextPage}
+      prevPage={prevPage}
+      />
+      </div> */}
       </div>
       <Footer />
     </div>

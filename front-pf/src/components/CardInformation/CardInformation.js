@@ -7,8 +7,8 @@ export default function CardInformation({ img, name, country }) {
     <div className={s.mainContainer}>
       <div className={s.container}>
         <div className={s.imgContainer}>
-          <h1 id={s.country}>{country}</h1>
-          <img src={img} />
+          <h2 id={s.country}>{country}</h2>
+          <img src={img} alt={country} />
         </div>
         <div className={s.infoContainer}>
           <div className={s.loreContainer}>
@@ -83,7 +83,7 @@ export default function CardInformation({ img, name, country }) {
                     </div>
                   </div>
                 </div>
-                <Link>Ver Todos los Hoteles</Link>
+                <Link to='/hotels'>Ver Todos los Hoteles</Link>
               </div>
             </div>
           </div>
