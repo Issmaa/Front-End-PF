@@ -7,12 +7,12 @@ export default function CardInformation({ img, name, country }) {
     <div className={s.mainContainer}>
       <div className={s.container}>
         <div className={s.imgContainer}>
-          <h2 id={s.country}>{country}</h2>
-          <img src={img} alt={country} />
+          <h2 id={s.country}>{country || "Argentina"}</h2>
+          <img src={img || "https://www.cordobaturismo.gov.ar/wp-content/uploads/2020/10/R%C3%ADo-en-La-Cumbrecita.jpg"} alt={country} />
         </div>
         <div className={s.infoContainer}>
           <div className={s.loreContainer}>
-            <h1>{name}</h1>
+            <h1>{name || "Cordoba"}</h1>
             <div className={s.lore}>
               <p>
                 loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdalorem
