@@ -2,7 +2,11 @@ import React from "react";
 import s from "./CardInformation.module.css";
 import { Link } from "react-router-dom";
 
+
 export default function CardInformation({ img, name, country }) {
+
+
+
   return (
     <div className={s.mainContainer}>
       <div className={s.container}>
@@ -56,15 +60,6 @@ export default function CardInformation({ img, name, country }) {
                 <h2>★ Hoteles</h2>
                 <div className={s.actsContainer}>
                   <div className={s.acts}>
-                    <p>Hotel San Bernardo</p>
-                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
-                    <div id={s.actLorem}>
-                      <p>
-                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
-                      </p>
-                    </div>
-                  </div>
-                  <div className={s.acts}>
                     <p>Hotel Hilton</p>
                     <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
                     <div id={s.actLorem}>
@@ -73,13 +68,12 @@ export default function CardInformation({ img, name, country }) {
                       </p>
                     </div>
                   </div>
-                  <div className={s.acts}>
-                    <p>Hotel Don Patricio</p>
-                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
-                    <div id={s.actLorem}>
-                      <p>
-                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
-                      </p>
+                  <div className={s.hotelInfo}>
+                    <div className={s.imgHotelContainer}>
+
+                    </div>
+                    <div className={s.hotelTxtContainer}>
+
                     </div>
                   </div>
                 </div>
