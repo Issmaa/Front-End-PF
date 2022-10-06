@@ -7,21 +7,30 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPackById } from "../../redux/actions";
 
+
+
+
 export default function InfoCard() {
-  const dispatch = useDispatch();
   const packById = useSelector((state) => state.packById);
+  const dispatch = useDispatch();
   const { id } = useParams();
 
-
+  console.log(id);
+  console.log(packById);
+  
   useEffect(() => {
     dispatch(getPackById(id));
+<<<<<<< HEAD
   }, [dispatch,id]);
 
+=======
+  }, []);
+>>>>>>> 8cf6d02d30f4a77fcde280676de2e563a687742d
 
   return (
     <div>
       <NavBar />
-      <CardInformation img={packById?.image} name={packById?.name} country={packById?.country}/>
+      <CardInformation />
       <Footer />
     </div>
   );

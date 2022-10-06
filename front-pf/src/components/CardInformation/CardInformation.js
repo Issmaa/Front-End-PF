@@ -2,7 +2,11 @@ import React from "react";
 import s from "./CardInformation.module.css";
 import { Link } from "react-router-dom";
 
+
 export default function CardInformation({ img, name, country }) {
+
+
+
   return (
     <div className={s.mainContainer}>
       <div className={s.container}>
@@ -56,6 +60,7 @@ export default function CardInformation({ img, name, country }) {
                 <h2>★ Hoteles</h2>
                 <div className={s.actsContainer}>
                   <div className={s.acts}>
+<<<<<<< HEAD
                     <p>Hotel San Bernardo</p>
                     <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" alt='hotel1'/>
                     <div id={s.actLorem}>
@@ -65,6 +70,8 @@ export default function CardInformation({ img, name, country }) {
                     </div>
                   </div>
                   <div className={s.acts}>
+=======
+>>>>>>> 8cf6d02d30f4a77fcde280676de2e563a687742d
                     <p>Hotel Hilton</p>
                     <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" alt='hotel2'/>
                     <div id={s.actLorem}>
@@ -73,6 +80,7 @@ export default function CardInformation({ img, name, country }) {
                       </p>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className={s.acts}>
                     <p>Hotel Don Patricio</p>
                     <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg"alt='hotel3' />
@@ -80,6 +88,14 @@ export default function CardInformation({ img, name, country }) {
                       <p>
                         loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
                       </p>
+=======
+                  <div className={s.hotelInfo}>
+                    <div className={s.imgHotelContainer}>
+
+                    </div>
+                    <div className={s.hotelTxtContainer}>
+
+>>>>>>> 8cf6d02d30f4a77fcde280676de2e563a687742d
                     </div>
                   </div>
                 </div>
