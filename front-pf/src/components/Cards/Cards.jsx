@@ -1,4 +1,3 @@
-import s from "./Cards.module.css"
 import CardDestinations from '../CardDestinations/CardDestinations';
 export default function Cards({hotels}) {
 

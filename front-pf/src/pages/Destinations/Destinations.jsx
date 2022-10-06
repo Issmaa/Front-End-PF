@@ -1,10 +1,10 @@
 import React, { useEffect,useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import NavBar from '../../components/NavBar/NavBar'
 import { getHotels } from '../../redux/actions';
 import Cards from '../../components/Cards/Cards'
-import Pagination from '../../components/Pagination/Pagination';
-import data from '../../data.json';
+// import Pagination from '../../components/Pagination/Pagination';
+// import data from '../../data.json';
 import Footer from '../../components/Footer/Footer';
 import fullData from '../dataFull.json';
 
@@ -17,37 +17,37 @@ export default function Paquetes() {
     dispatch(getHotels());
   }, [dispatch]);
 
-  const hotels = useSelector(state=> state.hotels);
+  // const hotels = useSelector(state=> state.hotels);
    //PAGINADO
    const [currentPage,setCurrentPage] = useState(1);
    const [resultsPorPagina] = useState(4);
    
    const indiceUltimo = currentPage * resultsPorPagina;
    const indicePrimero = indiceUltimo - resultsPorPagina;
-   let infoHotels = hotels.slice(indicePrimero, indiceUltimo);
+  //  let infoHotels = hotels.slice(indicePrimero, indiceUltimo);
    let myData = fullData.slice(indicePrimero,indiceUltimo)
    
    
    
    //Cambio de pagina
- function pagina(pageNumber){
-   return setCurrentPage(pageNumber)
- }
+//  function pagina(pageNumber){
+//    return setCurrentPage(pageNumber)
+//  }
 
- const nextPage = () => {
-  console.log(fullData.length)
-  console.log(currentPage)
-  if(currentPage + 1 <= Math.ceil(data.length / resultsPorPagina)){
-    return setCurrentPage(currentPage + 1);
-  } else {
-    return setCurrentPage(currentPage);
-  }
-  }
- const prevPage = () => {
-  if(currentPage > 1){
-     return setCurrentPage(currentPage - 1);
-  }
-}
+//  const nextPage = () => {
+//   console.log(fullData.length)
+//   console.log(currentPage)
+//   if(currentPage + 1 <= Math.ceil(data.length / resultsPorPagina)){
+//     return setCurrentPage(currentPage + 1);
+//   } else {
+//     return setCurrentPage(currentPage);
+//   }
+//   }
+//  const prevPage = () => {
+//   if(currentPage > 1){
+//      return setCurrentPage(currentPage - 1);
+//   }
+// }
 
   return (
     <div>

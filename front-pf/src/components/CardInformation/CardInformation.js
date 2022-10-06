@@ -24,7 +24,7 @@ export default function CardInformation({ img, name, country }) {
                 <div className={s.actsContainer}>
                   <div className={s.acts}>
                     <p>Correr</p>
-                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" alt='paseo1'/>
                     <div id={s.actLorem}>
                       <p>
                         loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
@@ -33,7 +33,7 @@ export default function CardInformation({ img, name, country }) {
                   </div>
                   <div className={s.acts}>
                     <p>Montañismo</p>
-                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" alt='paseo2'/>
                     <div id={s.actLorem}>
                       <p>
                         loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
@@ -42,7 +42,7 @@ export default function CardInformation({ img, name, country }) {
                   </div>
                   <div className={s.acts}>
                     <p>Rafting</p>
-                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" />
+                    <img src="https://www.interpatagonia.com/paseos/rafting_alu/rafting-alumine-3.jpg" alt='paseo3'/>
                     <div id={s.actLorem}>
                       <p>
                         loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
@@ -57,7 +57,7 @@ export default function CardInformation({ img, name, country }) {
                 <div className={s.actsContainer}>
                   <div className={s.acts}>
                     <p>Hotel San Bernardo</p>
-                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" alt='hotel1'/>
                     <div id={s.actLorem}>
                       <p>
                         loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
@@ -66,7 +66,7 @@ export default function CardInformation({ img, name, country }) {
                   </div>
                   <div className={s.acts}>
                     <p>Hotel Hilton</p>
-                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" alt='hotel2'/>
                     <div id={s.actLorem}>
                       <p>
                         loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
@@ -75,7 +75,7 @@ export default function CardInformation({ img, name, country }) {
                   </div>
                   <div className={s.acts}>
                     <p>Hotel Don Patricio</p>
-                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" />
+                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg"alt='hotel3' />
                     <div id={s.actLorem}>
                       <p>
                         loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd

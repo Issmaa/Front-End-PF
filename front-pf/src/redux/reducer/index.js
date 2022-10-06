@@ -1,6 +1,5 @@
-import { ActionTypes } from "@mui/base";
+// import { ActionTypes } from "@mui/base";
 import {
-  GET_ALL_PACKS,
   GET_ALL_HOTEL,
   GET_ALL_EXCURSION,
   GET_CURRENT_USER,

@@ -1,5 +1,4 @@
 import React from "react";
-import FlightIcon from "@mui/icons-material/Flight";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LandscapeIcon from "@mui/icons-material/Landscape";
 import HelpIcon from "@mui/icons-material/Help";

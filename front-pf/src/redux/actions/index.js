@@ -1,14 +1,12 @@
 import {
   GET_ALL_EXCURSION,
-  GET_ALL_PACKS,
   GET_ALL_HOTEL,
   GET_PACK_BY_ID,
   USER_LOGIN,
   USER_LOGOUT,
 } from "./actionsTypes";
-import { CREATE_USER, GET_CURRENT_USER } from "./actionsTypes";
+import { GET_CURRENT_USER } from "./actionsTypes";
 import data from "../../data.json";
-import fullData from '../../pages/dataFull.json'
 const axios = require("axios");
 
 export function getHotels() {
