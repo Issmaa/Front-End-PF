@@ -12,9 +12,6 @@ import InfoCard from "./pages/InfoCard/InfoCard";
 import PageHotel from "./pages/Packs/Hotel";
 import CreatePack from "./pages/CreatePack/CreatePack"
 import Hotels from './pages/Hotels/Hotels.jsx';
-import HotelDetail from "./pages/HotelDetail/HotelDetail";
-import Legales from "./pages/Legales/Legales";
-
 
 function App() {
   return (
@@ -31,8 +28,6 @@ function App() {
         <Route path="/page-hotel" element={<PageHotel />} />
         <Route path="/createPack" element={<CreatePack />} />
         <Route path="/hotels" element={<Hotels/>}/>
-        <Route path="/hoteldetail" element={<HotelDetail/>}/>
-        <Route path="/legales" element={<Legales/>}/>
       </Routes>
     </div>
   );
