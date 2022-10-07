@@ -9,9 +9,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Destinations from "./pages/Destinations/Destinations";
 import PageUser from "./pages/PageUser/PageUser";
 import InfoCard from "./pages/InfoCard/InfoCard";
-import PageHotel from "./pages/Packs/Hotel";
-import CreatePack from "./pages/CreatePack/CreatePack"
-import Hotels from './pages/Hotels/Hotels.jsx';
+import PageHotel from "./pages/Page-Hotel/Hotel";
+import CreatePack from "./pages/CreatePack/CreatePack";
+import Hotels from "./pages/Hotels/Hotels.jsx";
+import PagePack from "./pages/Page-pack/PagePack";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
         <Route path="/user" element={<PageUser />} />
         <Route path="/page-hotel" element={<PageHotel />} />
         <Route path="/createPack" element={<CreatePack />} />
-        <Route path="/hotels" element={<Hotels/>}/>
+
+        <Route path="/hotels" element={<Hotels />} />
+        <Route path="/page-pack" element={<PagePack />} />
       </Routes>
     </div>
   );
