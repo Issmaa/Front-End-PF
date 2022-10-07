@@ -9,6 +9,7 @@ export default function CardExcContainer({
   fechaI,
   fechaF,
 }) {
+  console.log(name);
   return (
     <div className="container-general">
       <div className={id % 2 === 0 ? "container-exc-der" : "container-exc-izq"}>

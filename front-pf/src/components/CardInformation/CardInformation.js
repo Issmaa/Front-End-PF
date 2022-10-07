@@ -68,12 +68,11 @@ export default function CardInformation({ img, name, country }) {
                       </p>
                     </div>
                   </div>
+
                   <div className={s.hotelInfo}>
                     <div className={s.imgHotelContainer}>
-
                     </div>
                     <div className={s.hotelTxtContainer}>
-
                     </div>
                   </div>
                 </div>
@@ -83,6 +82,8 @@ export default function CardInformation({ img, name, country }) {
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

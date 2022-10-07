@@ -22,6 +22,9 @@ export default function InfoCard() {
     dispatch(getPackById(id));
   }, []);
 
+
+
+
   return (
     <div>
       <NavBar />

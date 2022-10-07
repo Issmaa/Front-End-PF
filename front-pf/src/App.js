@@ -15,6 +15,7 @@ import Hotels from './pages/Hotels/Hotels.jsx';
 import CheckOut from "./pages/checkout/CheckOut";
 import Admin from "./admin/Admin";
 
+
 function App() {
   return (
     <div className="App">
@@ -32,6 +33,7 @@ function App() {
         <Route path="/hotels" element={<Hotels/>}/>
         <Route path="/checkout" element={<CheckOut/>}/>
         <Route path="/admin" element={<Admin/>}/>
+        <Route path="/page-pack" element={<PagePack />} />
       </Routes>
     </div>
   );
