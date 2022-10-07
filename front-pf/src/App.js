@@ -12,6 +12,8 @@ import InfoCard from "./pages/InfoCard/InfoCard";
 import PageHotel from "./pages/Packs/Hotel";
 import CreatePack from "./pages/CreatePack/CreatePack"
 import Hotels from './pages/Hotels/Hotels.jsx';
+import CheckOut from "./pages/checkout/CheckOut";
+import Admin from "./admin/Admin";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/page-hotel" element={<PageHotel />} />
         <Route path="/createPack" element={<CreatePack />} />
         <Route path="/hotels" element={<Hotels/>}/>
+        <Route path="/checkout" element={<CheckOut/>}/>
+        <Route path="/admin" element={<Admin/>}/>
       </Routes>
     </div>
   );

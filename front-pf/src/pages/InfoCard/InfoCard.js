@@ -20,12 +20,7 @@ export default function InfoCard() {
   
   useEffect(() => {
     dispatch(getPackById(id));
-<<<<<<< HEAD
-  }, [dispatch,id]);
-
-=======
   }, []);
->>>>>>> 8cf6d02d30f4a77fcde280676de2e563a687742d
 
   return (
     <div>

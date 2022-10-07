@@ -1,0 +1,13 @@
+.container {
+  border: 1px solid red;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+}
+
+.sideBar {
+  margin: 20px;
+  border: 1px solid red;
+  height: 75vh;
+  width: 300px;
+}
