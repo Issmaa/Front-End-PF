@@ -15,7 +15,7 @@ export default function Excursiones() {
   }, [dispatch]);
 
   const excursiones = useSelector((state) => state.excursiones);
-
+  console.log(excursiones);
   return (
     <div>
       <NavBar />

@@ -1,6 +1,7 @@
 import "./CardExc.css";
 import CardExcContainer from "./CardExcConta";
 export default function CardExcursion({ excursionesInfo }) {
+  console.log(excursionesInfo);
   return (
     <div className="container-general">
       {excursionesInfo &&
