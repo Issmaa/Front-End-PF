@@ -1,5 +1,4 @@
 import React from "react";
-import FlightIcon from "@mui/icons-material/Flight";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LandscapeIcon from "@mui/icons-material/Landscape";
 import HelpIcon from "@mui/icons-material/Help";
@@ -24,7 +23,7 @@ export default function SideBar() {
         <li className="li-iconos">
           <div className="iconoDeLi">
             <Link
-              to="destinations"
+              to="/destinations"
               className=" hover:text-3-color transition ease-in duration-200 text-1-color"
             >
               <LocalAirportIcon fontSize="large" />
@@ -34,7 +33,7 @@ export default function SideBar() {
         <li className="li-iconos">
           <div className="iconoDeLi">
             <Link
-              to="excursiones"
+              to="/excursiones"
               className=" hover:text-orange-500 transition ease-in duration-200 text-1-color"
             >
               <LandscapeIcon fontSize="large" />

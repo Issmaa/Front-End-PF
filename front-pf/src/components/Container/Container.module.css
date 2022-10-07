@@ -1,8 +1,8 @@
 .container {
   display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
-  justify-content: space-between;
 }
 
 .mainContainer {
@@ -20,6 +20,7 @@
   transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-size: 18px;
+  overflow: hidden;
 }
 
 .btn button:hover {

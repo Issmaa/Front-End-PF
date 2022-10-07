@@ -9,7 +9,7 @@ export default function NavBar() {
     <div className='text-zinc-100'>
       <a className='flex text-3xl font-sans font-medium text-zinc-100 items-center ml-1 hover:text-4-color transition ease-in duration-200 no-underline ' href='/'>
       <img src='/images/logo.png' alt='logo' className='w-8 h-8 my-6 ml-6 mr-2'/>
-      Travelop
+      Travelop.<span className="text-xs mt-3">LATAM</span>
       </a>
     </div>
     <div className='mx-2'>

@@ -28,6 +28,7 @@ function App() {
         <Route path="/user" element={<PageUser />} />
         <Route path="/page-hotel" element={<PageHotel />} />
         <Route path="/createPack" element={<CreatePack />} />
+
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/page-pack" element={<PagePack />} />
       </Routes>

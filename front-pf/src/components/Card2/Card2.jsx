@@ -1,4 +1,3 @@
-import s from "../Card/CardCss.css";
 
 function Card2({ name, cost, lore }) {
   return (

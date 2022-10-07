@@ -1,6 +1,7 @@
 .mainContainer {
   background-image: url("../../../public/images/argentina_mountain_lake-Scenery_HD_Wallpaper_1366x768.jpg");
   background-size: 100% 100%;
+  text-align: center;
 }
 
 .container {
@@ -19,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .imgContainer img {
@@ -32,6 +34,7 @@
 .infoContainer {
   height: 40vh;
   color: rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 
 .loreContainer h1 {
@@ -48,7 +51,7 @@
   font-size: 20px;
 }
 
-.loreContainer h1:hover{
+.loreContainer h1:hover {
   background-color: #0b132bff;
 }
 
@@ -66,7 +69,7 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-#country:hover{
+#country:hover {
   background-color: #0b132bff;
 }
 
@@ -116,7 +119,6 @@
   align-items: center;
 }
 
-
 .actsContainer {
   display: flex;
   width: 100%;
@@ -131,45 +133,44 @@
   width: 25%;
   margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   background-color: #1c2541ff;
   border-radius: 20px;
-  transition: .3s;
+  transition: 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.acts:hover{
+.acts:hover {
   background-color: rgb(44, 58, 100);
-  transition: .3s;
+  transition: 0.3s;
   height: 41vh;
   width: 26%;
   margin: 3px;
 }
 
-.acts p{
+.acts p {
   text-align: center;
   font-size: 20px;
   margin-top: 3px;
 }
 
-.acts img{
+.acts img {
   max-height: 240px;
 }
 
-#actLorem{
+#actLorem {
   word-wrap: break-word;
   max-height: 90px;
   max-width: 19vw;
   padding: 10px;
 }
 
-#actLorem p{
+#actLorem p {
   font-size: 16px;
 }
-
 
 .actContainer a {
   text-decoration: none;
@@ -194,4 +195,19 @@
   color: #1c2541ff;
   background-color: #5bc0beff;
   transition: 0.2s;
+}
+
+.hotelInfo {
+  border: 1px solid red;
+  height: 40vh;
+  width: 50vw;
+  margin-top: 10px;
+}
+
+.imgHotelContainer {
+
+}
+
+.hotelTxtContainer {
+
 }

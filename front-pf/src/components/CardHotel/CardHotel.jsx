@@ -1,8 +1,9 @@
-import "./CardHotel.css";
+// import "./CardHotel.css";
+import { Link } from "@mui/material";
 export default function CardHotel() {
   return (
     <div>
-      <a className="pack">
+      <Link to='' className="pack">
         <div className="imgPackCardTotal">
           <img
             className="imagenCardPack"
@@ -24,7 +25,7 @@ export default function CardHotel() {
         <div className="valorPack">
           <h1>$80000</h1>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

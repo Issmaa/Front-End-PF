@@ -8,9 +8,11 @@ module.exports = {
       spacing: {
         '127': '31rem',
         '128': '32rem',
+        '129': '5.5rem'
       },
       fontFamily: {
-        "josefin": "'Josefin Sans', sans-serif"
+        "josefin": "'Josefin Sans', sans-serif",
+        "nunito": "'Nunito', sans-serif"
       },
       colors: {
         "1-color": "var(--oxford-blue)",
