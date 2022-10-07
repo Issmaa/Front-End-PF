@@ -5,14 +5,10 @@ import {
   USER_LOGIN,
   USER_LOGOUT,
 } from "./actionsTypes";
-<<<<<<< HEAD
+
 import { GET_CURRENT_USER } from "./actionsTypes";
 import data from "../../data.json";
-=======
-import { CREATE_USER, GET_CURRENT_USER } from "./actionsTypes";
-import fullData from "../../pages/dataFull.json";
 
->>>>>>> 8cf6d02d30f4a77fcde280676de2e563a687742d
 const axios = require("axios");
 
 export function getHotels() {
@@ -36,7 +32,7 @@ export const getCurrentUser = (obj) => (dispatch) => {
 };
 
 export const getPackById = (paramId) => async (dispatch) => {
-  let pack = await fullData.filter((pack) => pack.id === paramId);
+  let pack = await data.filter((pack) => pack.id === paramId);
   return dispatch({ type: GET_PACK_BY_ID, payload: pack });
 };
 

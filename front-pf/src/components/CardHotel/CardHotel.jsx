@@ -1,4 +1,4 @@
-import "./CardHotel.css";
+// import "./CardHotel.css";
 import { Link } from "@mui/material";
 export default function CardHotel() {
   return (
