@@ -60,15 +60,6 @@ export default function CardInformation({ img, name, country }) {
                 <h2>★ Hoteles</h2>
                 <div className={s.actsContainer}>
                   <div className={s.acts}>
-                    <p>Hotel San Bernardo</p>
-                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" alt='hotel1'/>
-                    <div id={s.actLorem}>
-                      <p>
-                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
-                      </p>
-                    </div>
-                  </div>
-                  <div className={s.acts}>
                     <p>Hotel Hilton</p>
                     <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg" alt='hotel2'/>
                     <div id={s.actLorem}>
@@ -77,13 +68,7 @@ export default function CardInformation({ img, name, country }) {
                       </p>
                     </div>
                   </div>
-                  <div className={s.acts}>
-                    <p>Hotel Don Patricio</p>
-                    <img src="https://content.r9cdn.net/himg/62/c0/84/ice-85676218-68620422_3XL-430714.jpg"alt='hotel3' />
-                    <div id={s.actLorem}>
-                      <p>
-                        loremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasdaloremdsasd
-                      </p>
+
                   <div className={s.hotelInfo}>
                     <div className={s.imgHotelContainer}>
                     </div>

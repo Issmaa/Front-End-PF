@@ -20,8 +20,8 @@ export default function InfoCard() {
   
   useEffect(() => {
     dispatch(getPackById(id));
+  }, []);
 
-  }, [dispatch,id]);
 
 
 

@@ -6,9 +6,11 @@ import {
   USER_LOGOUT,
   FILTRADO_POR_COSTO,
 } from "./actionsTypes";
+import { CREATE_USER, GET_CURRENT_USER } from "./actionsTypes";
+import fullData from "../../pages/dataFull.json";
 
-import { GET_CURRENT_USER } from "./actionsTypes";
-import data from "../../data.json";
+
+
 
 const axios = require("axios");
 
